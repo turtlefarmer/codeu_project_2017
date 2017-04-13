@@ -1,167 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1afb000d-fd0d-4266-8877-7552fdaeae8b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/ClientMain.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/RelayMain$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/RelayMain.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/ServerMain$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/ServerMain.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/SimpleGuiClientMain.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/ClientContext.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/ClientConversation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/ClientMessage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/ClientUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/Controller.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/View.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/commandline/Chat.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/commandline/ListNavigator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ChatSimpleGui.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ConversationPanel$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ConversationPanel$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ConversationPanel$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ConversationPanel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/MessagePanel$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/MessagePanel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/BasicController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/BasicView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Conversation$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Conversation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/ConversationSummary$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/ConversationSummary.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$Handler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$Processor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/LinearUuidGenerator$BasicUuid.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/LinearUuidGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/ListViewable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/LogicalView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Message$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Message.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/NetworkCode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/RawController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Relay$Bundle$Component.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Relay$Bundle.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Relay.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Secret.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/SinglesView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Time$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Time.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/User$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/User.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuid$Generator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuid.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$2$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/database/DatabaseAccess.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/database/Model/ConversationModel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/database/Model/UserModel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/Server$Bundle.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/Server$Component.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/Server.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd$1$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd$2$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Controller.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Model$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Model$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Model.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/NoOpRelay$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/NoOpRelay.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RandomUuidGenerator$BasicUuid.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RandomUuidGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay$2$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay$Component.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Server.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/View.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Logger$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Logger$Log.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Logger.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Method.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/RemoteAddress.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$7.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ClientConnectionSource$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ClientConnectionSource.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/Connection.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ConnectionSource.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ServerConnectionSource$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ServerConnectionSource.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/LinkIterable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/LinkIterator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/Store.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/StoreAccessor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/StoreLink.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/TestRunner.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/common/SecretTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/common/UuidTest$TestUuid.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/common/UuidTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/common/UuidsTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/relay/ServerTest$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/relay/ServerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/server/BasicControllerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/server/RawControllerTest$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/server/RawControllerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/util/store/StoreTest$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/util/store/StoreTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/commons-codec-1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/commons-logging-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/firebase-admin-4.1.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-api-client-1.21.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-api-client-gson-1.21.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-http-client-1.21.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-http-client-gson-1.21.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-http-client-jackson2-1.21.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-oauth-client-1.21.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/gson-2.7.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/guava-jdk5-17.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/httpclient-4.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/httpcore-4.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/jackson-core-2.1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/json-20160212.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/jsr305-1.3.9.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_admin_4_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/third_party.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chat_server_log.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chat_simple_gui_client_log.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codeu_project_2017.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/codeu/chat/database/Model/ConversationModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/codeu/chat/database/Model/UserModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/project--7615521414167755910-firebase-adminsdk-d9m2o-fb06241f95.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/codeu/chat/client/simplegui/UserPanel.java" afterPath="$PROJECT_DIR$/src/codeu/chat/client/simplegui/UserPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/codeu/chat/server/Controller.java" afterPath="$PROJECT_DIR$/src/codeu/chat/server/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/codeu/chat/server/Model.java" afterPath="$PROJECT_DIR$/src/codeu/chat/server/Model.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/codeu/chat/server/Server.java" afterPath="$PROJECT_DIR$/src/codeu/chat/server/Server.java" />
-    </list>
+    <list default="true" id="1afb000d-fd0d-4266-8877-7552fdaeae8b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -179,10 +19,24 @@
       <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1854">
-              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state relative-caret-position="1602">
+              <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
+                <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
+                <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
+                <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
+                <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
+                <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
+                <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
+                <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
+                <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
+                <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
+                <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
+                <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
+                <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
+                <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -266,8 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -280,9 +132,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeu_project_2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeu_project_2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -872,6 +748,7 @@
       <workItem from="1491361670265" duration="3133000" />
       <workItem from="1491674081381" duration="21715000" />
       <workItem from="1492106741956" duration="275000" />
+      <workItem from="1492107325640" duration="100000" />
     </task>
     <servers />
   </component>
@@ -887,7 +764,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29450000" />
+    <option name="totallyTimeSpent" value="29550000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -896,30 +773,30 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27244583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4473684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24701196" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25099602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5263158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -941,6 +818,38 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
+            <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
+            <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
+            <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -955,6 +864,20 @@
           <caret line="108" column="8" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
+            <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
+            <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
+            <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -987,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,10 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
           <caret line="192" column="46" lean-forward="false" selection-start-line="192" selection-start-column="43" selection-end-line="192" selection-end-column="51" />
-          <folding>
-            <element signature="e#5390#5391#0" expanded="true" />
-            <element signature="e#5445#5446#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1025,9 +943,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="112" lean-forward="false" selection-start-line="16" selection-start-column="112" selection-end-line="16" selection-end-column="112" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,6 +953,20 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
+            <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
+            <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
+            <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1052,7 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,13 +1028,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/third_party/project--7615521414167755910-firebase-adminsdk-d9m2o-fb06241f95.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/third_party/project--7615521414167755910-firebase-adminsdk-d9m2o-fb06241f95.json" />
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-168">
@@ -1124,7 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="152" column="33" lean-forward="false" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,7 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1872">
           <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,7 +1159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1246,10 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
           <caret line="192" column="46" lean-forward="false" selection-start-line="192" selection-start-column="43" selection-end-line="192" selection-end-column="51" />
-          <folding>
-            <element signature="e#5390#5391#0" expanded="true" />
-            <element signature="e#5445#5446#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1268,7 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,7 +1191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,10 +1228,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
-          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="1602">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
+            <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
+            <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
+            <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
+            <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
+            <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
           </folding>
         </state>
       </provider>
