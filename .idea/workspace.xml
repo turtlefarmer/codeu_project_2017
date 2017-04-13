@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1afb000d-fd0d-4266-8877-7552fdaeae8b" name="Default" comment="" />
+    <list default="true" id="1afb000d-fd0d-4266-8877-7552fdaeae8b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,38 +18,22 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1602">
-              <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
-                <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
-                <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
-                <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
-                <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
-                <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
-                <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
-                <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
-                <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
-                <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
-                <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
-                <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
-                <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
-                <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseAccess.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseAccess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+            <state relative-caret-position="144">
+              <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -68,6 +55,16 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="persistence" />
+      </map>
+    </option>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="persistence" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="turtlefarmer" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="codeu_project_2017" />
   </component>
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
@@ -90,6 +87,7 @@
         <option value="$PROJECT_DIR$/src/codeu/chat/client/simplegui/UserPanel.java" />
         <option value="$PROJECT_DIR$/src/codeu/chat/server/Model.java" />
         <option value="$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -120,6 +118,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,11 +155,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeu_project_2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeu_project_2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -748,7 +772,8 @@
       <workItem from="1491361670265" duration="3133000" />
       <workItem from="1491674081381" duration="21715000" />
       <workItem from="1492106741956" duration="275000" />
-      <workItem from="1492107325640" duration="100000" />
+      <workItem from="1492107325640" duration="267000" />
+      <workItem from="1492107616535" duration="3804000" />
     </task>
     <servers />
   </component>
@@ -764,7 +789,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29550000" />
+    <option name="totallyTimeSpent" value="33521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -778,20 +803,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27244583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27244583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4473684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25099602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2549801" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -820,65 +845,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
-            <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
-            <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
-            <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1944">
           <caret line="108" column="8" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
-            <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
-            <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
-            <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -935,39 +904,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1296">
           <caret line="111" column="16" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="112" lean-forward="false" selection-start-line="16" selection-start-column="112" selection-end-line="16" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java" />
     <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
-            <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
-            <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
-            <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -986,13 +931,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chat_server_log.log.lck" />
-    <entry file="file://$PROJECT_DIR$/chat_server_log.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-793">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_simple_gui_client.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1088,14 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3018">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/codeu/chat/server/BasicControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -1180,28 +1110,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/Model/ConversationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/Model/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/ChatSimpleGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/Model/ConversationModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/Model/UserModel.java" />
     <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1222,38 +1132,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="111" column="16" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1492107276928" expanded="true" signature="4580:4778" ph="{...}" />
-            <marker date="1492107276928" expanded="false" signature="4841:4848" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="4872:4876" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="4941:4948" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="4974:4978" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5045:5052" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5078:5082" ph=" }" />
-            <marker date="1492107276928" expanded="true" signature="5119:5274" ph="{...}" />
-            <marker date="1492107276928" expanded="false" signature="5327:5334" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5353:5357" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5412:5419" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5440:5444" ph=" }" />
-            <marker date="1492107276928" expanded="false" signature="5501:5508" ph=" { " />
-            <marker date="1492107276928" expanded="false" signature="5529:5533" ph=" }" />
-          </folding>
+        <state relative-caret-position="630">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/NoOpRelay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/RandomUuidGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-348">
+          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1548">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/ChatSimpleGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/commandline/Chat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_server_log.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+        <state relative-caret-position="144">
+          <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           <folding />
         </state>
       </provider>
