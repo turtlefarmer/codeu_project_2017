@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1afb000d-fd0d-4266-8877-7552fdaeae8b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/ClientMain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/RelayMain$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/RelayMain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/ServerMain$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/ServerMain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/SimpleGuiClientMain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/ClientContext.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/ClientConversation.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/ClientMessage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/ClientUser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/Controller.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/View.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/commandline/Chat.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/commandline/ListNavigator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ChatSimpleGui.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ConversationPanel$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ConversationPanel$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ConversationPanel$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/ConversationPanel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/MessagePanel$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/MessagePanel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/client/simplegui/UserPanel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/BasicController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/BasicView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Conversation$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Conversation.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/ConversationSummary$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/ConversationSummary.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$Handler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub$Processor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Hub.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/LinearUuidGenerator$BasicUuid.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/LinearUuidGenerator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/ListViewable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/LogicalView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Message$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Message.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/NetworkCode.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/RawController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Relay$Bundle$Component.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Relay$Bundle.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Relay.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Secret.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/SinglesView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Time$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Time.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/User$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuid$Generator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuid.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$2$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/common/Uuids.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/database/DatabaseAccess.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/database/Model/ConversationModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/database/Model/UserModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/Server$Bundle.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/Server$Component.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/Server.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd$2$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/relay/ServerFrontEnd.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Controller.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Model$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Model$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Model.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/NoOpRelay$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/NoOpRelay.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RandomUuidGenerator$BasicUuid.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RandomUuidGenerator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay$2$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay$Component.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/RemoteRelay.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/Server.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/server/View.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Logger$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Logger$Log.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Logger.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Method.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/RemoteAddress.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/Serializers.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ClientConnectionSource$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ClientConnectionSource.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/Connection.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ConnectionSource.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ServerConnectionSource$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/connections/ServerConnectionSource.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/LinkIterable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/LinkIterator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/Store.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/StoreAccessor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/codeu_project_2017/codeu/chat/util/store/StoreLink.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/TestRunner.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/common/SecretTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/common/UuidTest$TestUuid.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/common/UuidTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/common/UuidsTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/relay/ServerTest$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/relay/ServerTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/server/BasicControllerTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/server/RawControllerTest$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/server/RawControllerTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/util/store/StoreTest$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/test/codeu_project_2017/codeu/chat/util/store/StoreTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/commons-codec-1.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/commons-logging-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/firebase-admin-4.1.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-api-client-1.21.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-api-client-gson-1.21.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-http-client-1.21.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-http-client-gson-1.21.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-http-client-jackson2-1.21.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/google-oauth-client-1.21.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/gson-2.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/guava-jdk5-17.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/httpclient-4.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/httpcore-4.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/jackson-core-2.1.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/json-20160212.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/jsr305-1.3.9.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_admin_4_1_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/third_party.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chat_server_log.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chat_simple_gui_client_log.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codeu_project_2017.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/codeu/chat/database/Model/ConversationModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/codeu/chat/database/Model/UserModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/third_party/project--7615521414167755910-firebase-adminsdk-d9m2o-fb06241f95.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/codeu/chat/client/simplegui/UserPanel.java" afterPath="$PROJECT_DIR$/src/codeu/chat/client/simplegui/UserPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/codeu/chat/server/Controller.java" afterPath="$PROJECT_DIR$/src/codeu/chat/server/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/codeu/chat/server/Model.java" afterPath="$PROJECT_DIR$/src/codeu/chat/server/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/codeu/chat/server/Server.java" afterPath="$PROJECT_DIR$/src/codeu/chat/server/Server.java" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1854">
+              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseAccess.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>model</find>
+      <find>c</find>
+      <find>controller</find>
+      <find>server</find>
+      <find>model.add</find>
+      <find>loa</find>
+      <find>listmodel</find>
+      <find>load</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1490590634085" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/codeu/chat/ServerMain.java" />
+        <option value="$PROJECT_DIR$/src/codeu/chat/database/Model/UserModel.java" />
+        <option value="$PROJECT_DIR$/src/codeu/chat/server/Controller.java" />
+        <option value="$PROJECT_DIR$/src/codeu/chat/server/Server.java" />
+        <option value="$PROJECT_DIR$/src/codeu/chat/common/User.java" />
+        <option value="$PROJECT_DIR$/src/codeu/chat/client/simplegui/UserPanel.java" />
+        <option value="$PROJECT_DIR$/src/codeu/chat/server/Model.java" />
+        <option value="$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1301" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeu_project_2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeu_project_2017" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/third_party" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+  </component>
+  <component name="RunManager" selected="Multirun.App">
+    <configuration default="false" name="All Tests" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="codeu_project_2017" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="codeu_project_2017" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Multirun" factoryName="Multirun" separateTabs="true" startOneByOne="true" markFailedProcess="true" hideSuccessProcess="false" delayTime="0">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="run_server" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="codeu.chat.ServerMain" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;100.101&quot; &quot;ABABAB&quot; &quot;2007&quot;" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="codeu_project_2017" />
+      <envs />
+      <method>
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="clean" run_configuration_type="BashConfigurationType" />
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="false" name="run_simple_gui_client" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="codeu.chat.SimpleGuiClientMain" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="localhost@2007" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="codeu_project_2017" />
+      <envs />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="clean" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clean.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="App" type="Multirun" factoryName="Multirun" separateTabs="true" startOneByOne="true" markFailedProcess="true" hideSuccessProcess="false" delayTime="0">
+      <runConfiguration name="run_server" type="Application" />
+      <runConfiguration name="run_simple_gui_client" type="Application" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.run_server" />
+      <item index="1" class="java.lang.String" itemvalue="Application.run_simple_gui_client" />
+      <item index="2" class="java.lang.String" itemvalue="Bash.clean" />
+      <item index="3" class="java.lang.String" itemvalue="Multirun.App" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All Tests" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All Tests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1afb000d-fd0d-4266-8877-7552fdaeae8b" name="Default" comment="" />
+      <created>1490801052059</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1490801052059</updated>
+      <workItem from="1490801054319" duration="4327000" />
+      <workItem from="1491361670265" duration="3133000" />
+      <workItem from="1491674081381" duration="21715000" />
+      <workItem from="1492106741956" duration="275000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_Tests - 2017.04.04 at 23h 10m 03s.xml">
+      <configuration name="All Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_Tests - 2017.04.09 at 22h 12m 41s.xml">
+      <configuration name="All Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_codeu_project_2017 - 2017.03.29 at 17h 38m 33s.xml">
+      <configuration name="All in codeu_project_2017" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29450000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27244583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4473684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24701196" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5263158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1944">
+          <caret line="108" column="8" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientConversation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="174" column="30" lean-forward="false" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/ChatSimpleGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/MessagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+          <folding>
+            <element signature="e#3230#3231#0" expanded="true" />
+            <element signature="e#3264#3265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/UserPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3060">
+          <caret line="192" column="46" lean-forward="false" selection-start-line="192" selection-start-column="43" selection-end-line="192" selection-end-column="51" />
+          <folding>
+            <element signature="e#5390#5391#0" expanded="true" />
+            <element signature="e#5445#5446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/javax/swing/DefaultListModel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="111" column="16" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="112" lean-forward="false" selection-start-line="16" selection-start-column="112" selection-end-line="16" selection-end-column="112" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_server.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_simple_gui_client_log.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_server_log.log.lck" />
+    <entry file="file://$PROJECT_DIR$/chat_server_log.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-793">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_simple_gui_client.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/third_party/project--7615521414167755910-firebase-adminsdk-d9m2o-fb06241f95.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Comparator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/ConversationPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="152" column="33" lean-forward="false" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/SimpleGuiClientMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="64" column="23" lean-forward="false" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/common/Hub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1872">
+          <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/ServerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3018">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/codeu/chat/server/BasicControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/codeu/chat/server/RawControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1085">
+          <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1331">
+          <caret line="97" column="11" lean-forward="false" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
+          <folding>
+            <element signature="e#1564#1565#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/common/Uuids.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/common/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/util/store/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/MessagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/UserPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3060">
+          <caret line="192" column="46" lean-forward="false" selection-start-line="192" selection-start-column="43" selection-end-line="192" selection-end-column="51" />
+          <folding>
+            <element signature="e#5390#5391#0" expanded="true" />
+            <element signature="e#5445#5446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="44" column="3" lean-forward="false" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+          <folding>
+            <element signature="e#3230#3231#0" expanded="true" />
+            <element signature="e#3264#3265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/Model/ConversationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/Model/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/simplegui/ChatSimpleGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/client/ClientConversation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="174" column="30" lean-forward="false" selection-start-line="174" selection-start-column="26" selection-end-line="174" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/javax/swing/DefaultListModel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="111" column="16" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/server/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1854">
+          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeu/chat/database/DatabaseAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>com.google.firebase:firebase-admin:4.1.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>codeu_project_2017</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>com.google.firebase:firebase-admin:4.1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
