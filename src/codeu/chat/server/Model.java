@@ -14,7 +14,11 @@
 
 package codeu.chat.server;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 import codeu.chat.common.Conversation;
 import codeu.chat.common.ConversationSummary;
@@ -23,8 +27,14 @@ import codeu.chat.common.Message;
 import codeu.chat.common.Time;
 import codeu.chat.common.User;
 import codeu.chat.common.Uuid;
+import codeu.chat.database.DatabaseAccess;
+import codeu.chat.database.Model.UserModel;
 import codeu.chat.util.store.Store;
 import codeu.chat.util.store.StoreAccessor;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.auth.FirebaseCredentials;
+import com.google.firebase.database.*;
 
 public final class Model {
 
@@ -68,12 +78,42 @@ public final class Model {
   private final Uuid.Generator userGenerations = new LinearUuidGenerator(null, 1, Integer.MAX_VALUE);
   private Uuid currentUserGeneration = userGenerations.make();
 
+  private final DatabaseAccess access = new DatabaseAccess();
+  private DatabaseReference ref = access.initialize();
+
+  // users
+  public void loadUsers() {
+    DatabaseReference usersRef = ref.child("users");
+    usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+      @Override
+      public void onDataChange(DataSnapshot dataSnapshot) {
+        System.out.println("Users Loaded: " + dataSnapshot.toString());
+        // TODO: fix
+        for (DataSnapshot child : dataSnapshot.getChildren()) {
+          UserModel user = child.getValue(UserModel.class);
+          System.out.println("Name: " + user.name + ", Creation: " + user.creation);
+        }
+      }
+
+      @Override
+      public void onCancelled(DatabaseError databaseError) {
+
+      }
+    });
+  }
+
   public void add(User user) {
     currentUserGeneration = userGenerations.make();
+    DatabaseReference usersRef = ref.child("users");
 
     userById.insert(user.id, user);
     userByTime.insert(user.creation, user);
     userByText.insert(user.name, user);
+
+    DatabaseReference newUserRef = usersRef.push();
+    String userId = newUserRef.getKey();
+    System.out.println("New user id: " + userId);
+    newUserRef.setValue(new UserModel(user.name, user.creation.toString()));
   }
 
   public StoreAccessor<Uuid, User> userById() {
@@ -91,6 +131,8 @@ public final class Model {
   public Uuid userGeneration() {
     return currentUserGeneration;
   }
+
+
 
   public void add(Conversation conversation) {
     conversationById.insert(conversation.id, conversation);

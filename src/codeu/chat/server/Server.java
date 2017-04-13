@@ -69,6 +69,7 @@ public final class Server {
 
   public boolean handleConnection(Connection connection) throws Exception {
 
+    model.loadUsers();
     LOG.info("Handling new connection...");
 
     return onMessage(connection.in(), connection.out());
@@ -223,7 +224,6 @@ public final class Server {
     final Relay.Bundle.Component relayMessage = bundle.user();
 
     User user = model.userById().first(relayUser.id());
-
     if (user == null) {
       user = controller.newUser(relayUser.id(), relayUser.text(), relayUser.time());
     }

@@ -95,7 +95,7 @@ public final class Controller implements RawController, BasicController {
       foundConversation.lastMessage = message.id;
 
       if (!foundConversation.users.contains(foundUser)) {
-        foundConversation.users.add(foundUser.id);
+        // foundConversation.users.add(foundUser.id);
       }
     }
 
@@ -109,7 +109,7 @@ public final class Controller implements RawController, BasicController {
 
     if (isIdFree(id)) {
 
-      user = new User(id, name, creationTime);
+      // user = new User(id, name, creationTime);
       model.add(user);
 
       LOG.info(

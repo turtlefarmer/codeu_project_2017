@@ -180,6 +180,8 @@ public final class UserPanel extends JPanel {
       }
     });
 
+    // TODO: load all current users retrieved from FireBase
+
     getAllUsers(listModel);
   }
 
