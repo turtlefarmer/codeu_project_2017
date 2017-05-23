@@ -22,35 +22,35 @@ import codeu.chat.common.Uuids;
 // Create a new random uuid. Uuids from this generator are random
 // but are not guaranteed to be unique. Checking uniqueness is left
 // to the caller.
-final class RandomUuidGenerator implements Uuid.Generator {
+final class RandomUuidGenerator {
 
   private static final class BasicUuid implements Uuid {
 
-    private final Uuid root;
-    private final int id;
+    private final String root;
+    private final String id;
 
-    public BasicUuid(Uuid root, int id) {
+    public BasicUuid(String root, String id) {
       this.root = root;
       this.id = id;
     }
 
     @Override
-    public Uuid root() { return root; }
+    public String root() { return root; }
 
     @Override
-    public int id() { return id; }
+    public String id() { return id; }
   }
 
-  private final Uuid commonRoot;
+  private final String commonRoot;
   private final Random random;
 
-  public RandomUuidGenerator(Uuid root, long seed) {
+  public RandomUuidGenerator(String root, long seed) {
     this.commonRoot = root;
     this.random = new Random(seed);
   }
 
-  @Override
-  public Uuid make() {
-    return Uuids.complete(new BasicUuid(commonRoot, random.nextInt()));
-  }
+//  @Override
+//  public String make() {
+//    return Uuids.complete(new BasicUuid(commonRoot, Integer.toString(random.nextInt())));
+//  }
 }

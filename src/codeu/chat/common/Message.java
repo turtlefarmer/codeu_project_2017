@@ -20,8 +20,6 @@ import java.io.OutputStream;
 
 import codeu.chat.util.Serializer;
 import codeu.chat.util.Serializers;
-import codeu.chat.common.Uuid;
-import codeu.chat.common.Uuids;
 
 public final class Message {
 
@@ -30,11 +28,11 @@ public final class Message {
     @Override
     public void write(OutputStream out, Message value) throws IOException {
 
-      Uuids.SERIALIZER.write(out, value.id);
-      Uuids.SERIALIZER.write(out, value.next);
-      Uuids.SERIALIZER.write(out, value.previous);
+      Serializers.STRING.write(out, value.id.toString());
+      Serializers.STRING.write(out, value.next.toString());
+      Serializers.STRING.write(out, value.previous.toString());
       Time.SERIALIZER.write(out, value.creation);
-      Uuids.SERIALIZER.write(out, value.author);
+      Serializers.STRING.write(out, value.author.toString());
       Serializers.STRING.write(out, value.content);
 
     }
@@ -43,25 +41,25 @@ public final class Message {
     public Message read(InputStream in) throws IOException {
 
       return new Message(
-          Uuids.SERIALIZER.read(in),
-          Uuids.SERIALIZER.read(in),
-          Uuids.SERIALIZER.read(in),
+          Serializers.STRING.read(in),
+          Serializers.STRING.read(in),
+          Serializers.STRING.read(in),
           Time.SERIALIZER.read(in),
-          Uuids.SERIALIZER.read(in),
+          Serializers.STRING.read(in),
           Serializers.STRING.read(in)
       );
 
     }
   };
 
-  public final Uuid id;
-  public final Uuid previous;
+  public final String id;
+  public final String previous;
   public final Time creation;
-  public final Uuid author;
+  public final String author;
   public final String content;
-  public Uuid next;
+  public String next;
 
-  public Message(Uuid id, Uuid next, Uuid previous, Time creation, Uuid author, String content) {
+  public Message(String id, String next, String previous, Time creation, String author, String content) {
 
     this.id = id;
     this.next = next;

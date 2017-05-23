@@ -18,12 +18,12 @@ package codeu.chat;
 import java.io.IOException;
 
 import codeu.chat.common.Hub;
-import codeu.chat.common.Relay;
+// import codeu.chat.common.Relay;
 import codeu.chat.common.Secret;
 import codeu.chat.common.Uuid;
 import codeu.chat.common.Uuids;
-import codeu.chat.server.NoOpRelay;
-import codeu.chat.server.RemoteRelay;
+// import codeu.chat.server.NoOpRelay;
+// import codeu.chat.server.RemoteRelay;
 import codeu.chat.server.Server;
 import codeu.chat.util.Logger;
 import codeu.chat.util.RemoteAddress;
@@ -53,17 +53,13 @@ final class ServerMain {
 
     final int myPort = Integer.parseInt(args[2]);
 
-    final RemoteAddress relayAddress = args.length > 3 ?
-                                       RemoteAddress.parse(args[3]) :
-                                       null;
-
     try (
         final ConnectionSource serverSource = ServerConnectionSource.forPort(myPort);
-        final ConnectionSource relaySource = relayAddress == null ? null : new ClientConnectionSource(relayAddress.host, relayAddress.port)
+        //final ConnectionSource relaySource = relayAddress == null ? null : new ClientConnectionSource(relayAddress.host, relayAddress.port)
     ) {
 
       LOG.info("Starting server...");
-      runServer(id, secret, serverSource, relaySource);
+      runServer(secret, serverSource);
 
     } catch (IOException ex) {
 
@@ -72,16 +68,10 @@ final class ServerMain {
     }
   }
 
-  private static void runServer(Uuid id,
-                                byte[] secret,
-                                ConnectionSource serverSource,
-                                ConnectionSource relaySource) {
+  private static void runServer(byte[] secret, ConnectionSource serverSource) {
 
-    final Relay relay = relaySource == null ?
-                        new NoOpRelay() :
-                        new RemoteRelay(relaySource);
 
-    final Server server = new Server(id, secret, relay);
+    final Server server = new Server(secret);
 
     LOG.info("Server object created.");
 

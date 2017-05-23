@@ -14,7 +14,6 @@
 
 package codeu.chat.common;
 
-import java.lang.StringBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -24,16 +23,16 @@ import codeu.chat.util.Serializer;
 import codeu.chat.util.Serializers;
 
 public final class Uuids {
-
-  public static final Uuid NULL = complete(new Uuid() {
-
-    @Override
-    public Uuid root() { return null; }
-
-    @Override
-    public int id() { return 0; }
-
-  });
+//
+//  public static final Uuid NULL = complete(new Uuid() {
+//
+//    @Override
+//    public Uuid root() { return null; }
+//
+//    @Override
+//    public String id() { return null; }
+//
+//  });
 
   public static final Serializer<Uuid> SERIALIZER = new Serializer<Uuid>() {
 
@@ -41,9 +40,9 @@ public final class Uuids {
     public void write(OutputStream out, Uuid value) throws IOException {
 
       int length = 0;
-      for (Uuid current = value; current != null; current = current.root()) {
-        length += 1;
-      }
+//      for (Uuid current = value; current != null; current = current.root()) {
+//        length += 1;
+//      }
 
       // To make things easy, limit the max length to be 255. It should be unlikely
       // that this limit will ever be reached as most chains should be less than
@@ -54,15 +53,15 @@ public final class Uuids {
         throw new IOException("Max supported Uuid chain length is 255");
       }
 
-      for (Uuid current = value; current != null; current = current.root()) {
-        Serializers.INTEGER.write(out, current.id());
-      }
+//      for (Uuid current = value; current != null; current = current.root()) {
+//        Serializers.STRING.write(out, current.id());
+//      }
     }
 
     @Override
     public Uuid read(InputStream in) throws IOException {
 
-      // "input.read" can only return one by of data so there is no need
+      // "input.read" can only return one byte of data so there is no need
       // to check that the bounds of 0 to 255 is respected.
       final int length = in.read();
       final int[] chain = new int[length];
@@ -74,53 +73,53 @@ public final class Uuids {
       Uuid head = null;
 
       for (int i = length - 1; i >= 0; i--) {
-        head = complete(deserializedUuid(head, chain[i]));
+        //head = complete(deserializedUuid(head, Integer.toString(chain[i])));
       }
 
       return head;
     }
 
-    private Uuid deserializedUuid(final Uuid root, final int id) {
+    private Uuid deserializedUuid(final String root, final String id) {
       return new Uuid() {
         @Override
-        public Uuid root() { return root; }
+        public String root() { return root; }
         @Override
-        public int id() { return id; }
+        public String id() { return id; }
       };
     }
   };
 
   // Wrap a Uuid to add definitions for the "equals" and "hashCode" methods so that
   // they will call into the "equals" and "hash" functions defined in Uuids.
-  public static Uuid complete(final Uuid source) {
-
-    return new Uuid() {
-
-      @Override
-      public Uuid root() { return source.root(); }
-
-      @Override
-      public int id() { return source.id(); }
-
-      @Override
-      public boolean equals(Object other) {
-        return other instanceof Uuid && Uuids.equals(source, (Uuid) other);
-      }
-
-      @Override
-      public int hashCode() { return Uuids.hash(source); }
-
-      @Override
-      public String toString() {
-        return Uuids.toString(source);
-      }
-    };
-  }
+//  public static Uuid complete(final Uuid source) {
+//
+//    return new Uuid() {
+//
+//      @Override
+//      public Uuid root() { return source.root(); }
+//
+//      @Override
+//      public String id() { return source.id(); }
+//
+//      @Override
+//      public boolean equals(Object other) {
+//        return other instanceof Uuid && Uuids.equals(source, (Uuid) other);
+//      }
+//
+//      @Override
+//      public int hashCode() { return Uuids.hash(source); }
+//
+//      @Override
+//      public String toString() {
+//        return Uuids.toString(source);
+//      }
+//    };
+//  }
 
   // Check if two Uuids share the same root. This check is only one level deep.
-  public static boolean related(Uuid a, Uuid b) {
-    return equals(a.root(), b.root());
-  }
+//  public static boolean related(Uuid a, Uuid b) {
+//    return equals(a.root(), b.root());
+//  }
 
   // Check if two Uuids represent the same value even if they are different refereces. This
   // means that all ids from the tail to the root have the same ids.
@@ -145,8 +144,8 @@ public final class Uuids {
     // Check id before checking the root as the ids are more likely to differ
     // and will short-circuit the logic preventing us from wasting time checking
     // the full chain.
-    return a.id() == b.id() && equals(a.root(), b.root());
-
+    //return a.id() == b.id() && equals(a.root(), b.root());
+    return false;
   }
 
   // Compute a hash code for the Uuids by walking up the chain.
@@ -154,51 +153,44 @@ public final class Uuids {
 
     int hash = 0;
 
-    for (Uuid current = id; current != null; current = current.root()) {
-      hash ^= Objects.hash(current.id());
-    }
+//    for (Uuid current = id; current != null; current = current.root()) {
+//      hash ^= Objects.hash(current.id());
+//    }
 
     return hash;
   }
 
   // Compute human-readable representation for Uuids
   // Use long internally to avoid negative integers.
-  public static String toString(Uuid id) {
-    final StringBuilder build = new StringBuilder();
-    buildString(id, build);
-    return String.format("[UUID:%s]", build.substring(1));  // index of 1 to skip initial '.'
-  }
-
-  private static void buildString(Uuid current, StringBuilder build) {
-    final long mask = (1L << 32) - 1;  // removes sign extension
-    if (current != null) {
-      buildString(current.root(), build);
-      build.append(".").append(current.id() & mask);
-    }
-  }
+//  public static String toString(Uuid id) {
+//    final StringBuilder build = new StringBuilder();
+//    buildString(id, build);
+//    return String.format("[UUID:%s]", build.substring(1));  // index of 1 to skip initial '.'
+//  }
+//
+//  private static void buildString(Uuid current, StringBuilder build) {
+//    final long mask = (1L << 32) - 1;  // removes sign extension
+//    if (current != null) {
+//      buildString(current.root(), build);
+//      build.append(".").append(current.id() + mask);
+//    }
+//  }
 
   // FROM STRING
   //
   // Create a uuid from a sting.
   public static Uuid fromString(String string) {
-    return fromString(null, string.split("\\."), 0);
+    return null;
   }
 
-  private static Uuid fromString(final Uuid root, String[] tokens, int index) {
+  private static String fromString(final String root, String[] tokens, int index) {
 
-    final int id = Integer.parseInt(tokens[index]);
+    final String id = tokens[index];
 
-    final Uuid link = complete(new Uuid() {
-      @Override
-      public Uuid root() { return root; }
-      @Override
-      public int id() { return id; }
-    });
+    final String link = "test";
 
     final int nextIndex = index + 1;
 
-    return nextIndex < tokens.length ?
-        fromString(link, tokens, nextIndex) :
-        link;
+    return link;
   }
 }

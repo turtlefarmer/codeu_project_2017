@@ -129,7 +129,7 @@ public final class RawControllerTest {
       @Override
       public Uuid root() { return null; }
       @Override
-      public int id() { return id; }
+      public String id() { return id; }
     });
   }
 }

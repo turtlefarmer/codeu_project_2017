@@ -34,6 +34,8 @@ public final class ClientMessage {
   private final static int MESSAGE_MAX_COUNT = 100;
   private final static int MESSAGE_FETCH_COUNT = 5;
 
+  private final static String EMPTY = "";
+
   private final Controller controller;
   private final View view;
 
@@ -97,7 +99,7 @@ public final class ClientMessage {
   }
 
   // For m-add command.
-  public void addMessage(Uuid author, Uuid conversation, String body) {
+  public void addMessage(String author, String conversation, String body) {
     final boolean validInputs = isValidBody(body) && (author != null) && (conversation != null);
 
     final Message message = (validInputs) ? controller.newMessage(author, conversation, body) : null;
@@ -152,7 +154,7 @@ public final class ClientMessage {
 
   // Determine the next message ID of the current conversation to start pulling.
   // This requires a read of the last read message to determine if the chain has been extended.
-  private Uuid getCurrentMessageFetchId(boolean replaceAll) {
+  private String getCurrentMessageFetchId(boolean replaceAll) {
     if (replaceAll || conversationContents.isEmpty()) {
       // Fetch/refetch all the messages.
       conversationContents.clear();
@@ -165,8 +167,8 @@ public final class ClientMessage {
     }
   }
 
-  private Uuid getCurrentTailMessageId() {
-    Uuid nextMessageId = conversationContents.get(conversationContents.size() - 1).id;
+  private String getCurrentTailMessageId() {
+    String nextMessageId = conversationContents.get(conversationContents.size() - 1).id;
     final List<Message> messageTail = new ArrayList<>(view.getMessages(nextMessageId, 1));
     if (messageTail.size() > 0) {
       final Message msg = messageTail.get(0);
@@ -201,10 +203,10 @@ public final class ClientMessage {
           conversationHead.title, conversationHead.id, conversationHead.firstMessage,
           conversationHead.lastMessage);
 
-      Uuid nextMessageId = getCurrentMessageFetchId(replaceAll);
+      String nextMessageId = getCurrentMessageFetchId(replaceAll);
 
       //  Stay in loop until all messages read (up to safety limit)
-      while (!nextMessageId.equals(Uuids.NULL) && conversationContents.size() < MESSAGE_MAX_COUNT) {
+      while (!nextMessageId.equals(EMPTY) && conversationContents.size() < MESSAGE_MAX_COUNT) {
 
         for (final Message msg : view.getMessages(nextMessageId, MESSAGE_FETCH_COUNT)) {
 
@@ -212,8 +214,8 @@ public final class ClientMessage {
 
           // Race: message possibly added since conversation fetched.  If that occurs,
           // pretend the newer messages do not exist - they'll get picked up next time).
-          if (msg.next.equals(Uuids.NULL) || msg.id.equals(conversationHead.lastMessage)) {
-            msg.next = Uuids.NULL;
+          if (msg.next.equals(EMPTY) || msg.id.equals(conversationHead.lastMessage)) {
+            msg.next = EMPTY;
             break;
           }
         }

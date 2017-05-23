@@ -528,3 +528,292 @@ Apr 13, 2017 2:07:03 PM codeu.chat.server.Server handleConnection
 INFO: Handling new connection...
 Apr 13, 2017 2:07:03 PM codeu.chat.server.Server handleConnection
 INFO: Handling new connection...
+Apr 13, 2017 4:03:52 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 13, 2017 4:03:52 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 13, 2017 4:05:53 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 13, 2017 4:05:53 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 13, 2017 4:07:47 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 13, 2017 4:07:47 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 13, 2017 4:08:16 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 13, 2017 4:08:16 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 13, 2017 4:08:16 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 13, 2017 4:08:16 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 13, 2017 4:08:16 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 13, 2017 4:08:16 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:10:41 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 22, 2017 4:10:41 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 22, 2017 4:10:42 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 22, 2017 4:10:42 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 22, 2017 4:10:43 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:10:44 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:30:25 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 22, 2017 4:30:26 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 22, 2017 4:30:26 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 22, 2017 4:30:26 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 22, 2017 4:30:26 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:30:26 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:30:38 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:30:38 PM codeu.chat.ServerMain$1 onException
+SEVERE: Exception during server tick.
+java.lang.NullPointerException
+	at codeu.chat.server.Model.add(Model.java:110)
+	at codeu.chat.server.Controller.newUser(Controller.java:113)
+	at codeu.chat.server.Controller.newUser(Controller.java:48)
+	at codeu.chat.server.Server.onMessage(Server.java:105)
+	at codeu.chat.server.Server.handleConnection(Server.java:75)
+	at codeu.chat.ServerMain$1.handle(ServerMain.java:93)
+	at codeu.chat.common.Hub$2.process(Hub.java:93)
+	at codeu.chat.common.Hub$3.run(Hub.java:133)
+
+Apr 22, 2017 4:31:19 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 22, 2017 4:31:19 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 22, 2017 4:31:20 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 22, 2017 4:31:20 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 22, 2017 4:31:20 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:31:20 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:31:25 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:31:25 PM codeu.chat.ServerMain$1 onException
+SEVERE: Exception during server tick.
+java.lang.NullPointerException
+	at codeu.chat.server.Model.add(Model.java:110)
+	at codeu.chat.server.Controller.newUser(Controller.java:113)
+	at codeu.chat.server.Controller.newUser(Controller.java:48)
+	at codeu.chat.server.Server.onMessage(Server.java:105)
+	at codeu.chat.server.Server.handleConnection(Server.java:75)
+	at codeu.chat.ServerMain$1.handle(ServerMain.java:93)
+	at codeu.chat.common.Hub$2.process(Hub.java:93)
+	at codeu.chat.common.Hub$3.run(Hub.java:133)
+
+Apr 22, 2017 4:32:46 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 22, 2017 4:32:46 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 22, 2017 4:32:46 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 22, 2017 4:32:46 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 22, 2017 4:32:47 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:32:47 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:32:51 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:32:51 PM codeu.chat.server.Controller newUser
+INFO: newUser success (user.id=[UUID:100.101.4116939353] user.name=Test user.time=22-Apr-2017 16:32:51.141)
+Apr 22, 2017 4:32:51 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:32:51 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:33:32 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:33:35 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:33:38 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:33:38 PM codeu.chat.ServerMain$1 onException
+SEVERE: Exception during server tick.
+com.google.firebase.database.DatabaseException: Serializing Collections is not supported, please use Lists instead
+	at com.google.firebase.database.utilities.encoding.CustomClassMapper.serialize(CustomClassMapper.java:136)
+	at com.google.firebase.database.utilities.encoding.CustomClassMapper.access$200(CustomClassMapper.java:33)
+	at com.google.firebase.database.utilities.encoding.CustomClassMapper$BeanMapper.serialize(CustomClassMapper.java:640)
+	at com.google.firebase.database.utilities.encoding.CustomClassMapper.serialize(CustomClassMapper.java:147)
+	at com.google.firebase.database.utilities.encoding.CustomClassMapper.convertToPlainJavaTypes(CustomClassMapper.java:46)
+	at com.google.firebase.database.DatabaseReference.setValueInternal(DatabaseReference.java:256)
+	at com.google.firebase.database.DatabaseReference.setValue(DatabaseReference.java:138)
+	at codeu.chat.server.Model.add(Model.java:148)
+	at codeu.chat.server.Controller.newConversation(Controller.java:142)
+	at codeu.chat.server.Controller.newConversation(Controller.java:53)
+	at codeu.chat.server.Server.onMessage(Server.java:115)
+	at codeu.chat.server.Server.handleConnection(Server.java:75)
+	at codeu.chat.ServerMain$1.handle(ServerMain.java:93)
+	at codeu.chat.common.Hub$2.process(Hub.java:93)
+	at codeu.chat.common.Hub$3.run(Hub.java:133)
+
+Apr 22, 2017 4:40:54 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 22, 2017 4:40:54 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 22, 2017 4:40:54 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 22, 2017 4:40:54 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 22, 2017 4:40:55 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:40:55 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:40:59 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:41:00 PM codeu.chat.server.Controller newUser
+INFO: newUser success (user.id=[UUID:100.101.590777504] user.name=Tester user.time=22-Apr-2017 16:40:59.997)
+Apr 22, 2017 4:41:00 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:41:00 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:41:01 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:41:04 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:41:04 PM codeu.chat.server.Controller newConversation
+INFO: Conversation added: [UUID:100.101.4084650279]
+Apr 22, 2017 4:41:04 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:41:04 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:41:04 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 22, 2017 4:41:04 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 24, 2017 1:34:07 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 1:34:07 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 1:43:15 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 1:43:16 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 1:47:35 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 1:47:35 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 1:47:53 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 1:47:53 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 1:47:54 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 24, 2017 1:47:54 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 24, 2017 1:48:34 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 1:48:34 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 1:48:34 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 24, 2017 1:48:34 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 24, 2017 1:48:34 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 24, 2017 2:04:12 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 2:04:12 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 2:04:13 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 24, 2017 2:04:13 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 24, 2017 2:04:13 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 24, 2017 2:05:50 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 2:05:50 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 2:05:50 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 24, 2017 2:05:50 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 24, 2017 2:05:50 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 24, 2017 2:10:18 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 2:10:18 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 2:10:18 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 24, 2017 2:10:18 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 24, 2017 2:10:30 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 2:10:30 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 2:10:31 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 24, 2017 2:10:31 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 24, 2017 2:10:31 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 24, 2017 2:12:24 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 2:12:24 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 2:12:24 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 24, 2017 2:12:24 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 24, 2017 2:14:46 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+Apr 24, 2017 2:14:46 PM codeu.chat.ServerMain main
+INFO: Starting server...
+Apr 24, 2017 2:14:47 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+Apr 24, 2017 2:14:47 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+Apr 24, 2017 2:14:47 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+Apr 24, 2017 2:16:38 PM codeu.chat.ServerMain$1 onException
+SEVERE: Exception during server tick.
+java.lang.IllegalArgumentException: Illegal Capacity: -1
+	at java.util.ArrayList.<init>(ArrayList.java:156)
+	at codeu.chat.util.Serializers$6.read(Serializers.java:145)
+	at codeu.chat.util.Serializers$6.read(Serializers.java:132)
+	at codeu.chat.server.Server.onMessage(Server.java:155)
+	at codeu.chat.server.Server.handleConnection(Server.java:69)
+	at codeu.chat.ServerMain$1.handle(ServerMain.java:90)
+	at codeu.chat.common.Hub$2.process(Hub.java:93)
+	at codeu.chat.common.Hub$3.run(Hub.java:133)
+
+May 03, 2017 1:03:37 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+May 03, 2017 1:03:37 PM codeu.chat.ServerMain main
+INFO: Starting server...
+May 03, 2017 1:03:38 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+May 03, 2017 1:03:38 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...
+May 03, 2017 1:03:41 PM codeu.chat.server.Server handleConnection
+INFO: Handling new connection...
+May 05, 2017 5:51:50 PM codeu.chat.ServerMain main
+INFO: ============================= START OF LOG =============================
+May 05, 2017 5:51:51 PM codeu.chat.ServerMain main
+INFO: Starting server...
+May 05, 2017 5:51:51 PM codeu.chat.database.DatabaseAccess initialize
+INFO: Using service account key: /home/greg/Dropbox/google/codeu_project_2017/third_party/project--7615521414167755910-firebase-adminsdk-d9m2o-fb06241f95.json
+May 05, 2017 5:51:51 PM codeu.chat.database.DatabaseAccess initialize
+INFO: Service account key valid
+May 05, 2017 5:51:51 PM codeu.chat.database.DatabaseAccess initialize
+INFO: Database initialized
+May 05, 2017 5:51:51 PM codeu.chat.ServerMain runServer
+INFO: Server object created.
+May 05, 2017 5:51:51 PM codeu.chat.ServerMain runServer
+INFO: Starting hub...

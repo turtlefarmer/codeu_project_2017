@@ -28,13 +28,13 @@ public final class ClientUser {
 
   private final static Logger.Log LOG = Logger.newLog(ClientUser.class);
 
-  private static final Collection<Uuid> EMPTY = Arrays.asList(new Uuid[0]);
+  private static final Collection<String> EMPTY = Arrays.asList();
   private final Controller controller;
   private final View view;
 
   private User current = null;
 
-  private final Map<Uuid, User> usersById = new HashMap<>();
+  private final Map<String, User> usersById = new HashMap<>();
 
   // This is the set of users known to the server, sorted by name.
   private Store<String, User> usersByName = new Store<>(String.CASE_INSENSITIVE_ORDER);
@@ -109,11 +109,11 @@ public final class ClientUser {
     }
   }
 
-  public User lookup(Uuid id) {
+  public User lookup(String id) {
     return (usersById.containsKey(id)) ? usersById.get(id) : null;
   }
 
-  public String getName(Uuid id) {
+  public String getName(String id) {
     final User user = lookup(id);
     if (user == null) {
       LOG.warning("userContext.lookup() failed on ID: %s", id);

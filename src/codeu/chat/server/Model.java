@@ -28,15 +28,15 @@ import codeu.chat.common.Time;
 import codeu.chat.common.User;
 import codeu.chat.common.Uuid;
 import codeu.chat.database.DatabaseAccess;
+import codeu.chat.database.Model.ConversationModel;
 import codeu.chat.database.Model.UserModel;
 import codeu.chat.util.store.Store;
 import codeu.chat.util.store.StoreAccessor;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.database.*;
 
 public final class Model {
+
+  private static final String USERS = "USERS";
 
   private static final Comparator<Uuid> UUID_COMPARE = new Comparator<Uuid>() {
 
@@ -49,8 +49,9 @@ public final class Model {
 
       if (a != null && b == null) { return 1; }
 
-      final int order = Integer.compare(a.id(), b.id());
-      return order == 0 ? compare(a.root(), b.root()) : order;
+      // final String order = Integer.compare(a.id(), b.id());
+      //return order == 0 ? compare(a.root(), b.root()) : order;
+      return 1;
     }
   };
 
@@ -63,27 +64,27 @@ public final class Model {
 
   private static final Comparator<String> STRING_COMPARE = String.CASE_INSENSITIVE_ORDER;
 
-  private final Store<Uuid, User> userById = new Store<>(UUID_COMPARE);
+  private final Store<String, User> userById = new Store<>(STRING_COMPARE);
   private final Store<Time, User> userByTime = new Store<>(TIME_COMPARE);
   private final Store<String, User> userByText = new Store<>(STRING_COMPARE);
 
-  private final Store<Uuid, Conversation> conversationById = new Store<>(UUID_COMPARE);
+  private final Store<String, Conversation> conversationById = new Store<>(STRING_COMPARE);
   private final Store<Time, Conversation> conversationByTime = new Store<>(TIME_COMPARE);
   private final Store<String, Conversation> conversationByText = new Store<>(STRING_COMPARE);
 
-  private final Store<Uuid, Message> messageById = new Store<>(UUID_COMPARE);
+  private final Store<String, Message> messageById = new Store<>(STRING_COMPARE);
   private final Store<Time, Message> messageByTime = new Store<>(TIME_COMPARE);
   private final Store<String, Message> messageByText = new Store<>(STRING_COMPARE);
 
-  private final Uuid.Generator userGenerations = new LinearUuidGenerator(null, 1, Integer.MAX_VALUE);
-  private Uuid currentUserGeneration = userGenerations.make();
+ // private final Uuid.Generator userGenerations = new LinearUuidGenerator(null, 1, Integer.MAX_VALUE);
+ // private Uuid currentUserGeneration = userGenerations.make();
 
   private final DatabaseAccess access = new DatabaseAccess();
   private DatabaseReference ref = access.initialize();
+  DatabaseReference usersRef = ref.child(USERS);
 
   // users
   public void loadUsers() {
-    DatabaseReference usersRef = ref.child("users");
     usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
       @Override
       public void onDataChange(DataSnapshot dataSnapshot) {
@@ -102,21 +103,17 @@ public final class Model {
     });
   }
 
-  public void add(User user) {
-    currentUserGeneration = userGenerations.make();
-    DatabaseReference usersRef = ref.child("users");
+  public void add(User user) {;
 
     userById.insert(user.id, user);
     userByTime.insert(user.creation, user);
     userByText.insert(user.name, user);
 
-    DatabaseReference newUserRef = usersRef.push();
-    String userId = newUserRef.getKey();
-    System.out.println("New user id: " + userId);
+    DatabaseReference newUserRef = usersRef.child(user.id);
     newUserRef.setValue(new UserModel(user.name, user.creation.toString()));
   }
 
-  public StoreAccessor<Uuid, User> userById() {
+  public StoreAccessor<String, User> userById() {
     return userById;
   }
 
@@ -128,19 +125,26 @@ public final class Model {
     return userByText;
   }
 
-  public Uuid userGeneration() {
-    return currentUserGeneration;
-  }
+//  public Uuid userGeneration() {
+//    return currentUserGeneration;
+//  }
 
 
 
   public void add(Conversation conversation) {
+    DatabaseReference convosRef = ref.child("conversations");
+
     conversationById.insert(conversation.id, conversation);
     conversationByTime.insert(conversation.creation, conversation);
     conversationByText.insert(conversation.title, conversation);
+
+    DatabaseReference newConvoRef = convosRef.push();
+    String convoId = newConvoRef.getKey();
+    System.out.println("New convo id: " + convoId);
+    newConvoRef.setValue(new ConversationModel(conversation.creation.toString(), conversation.title));
   }
 
-  public StoreAccessor<Uuid, Conversation> conversationById() {
+  public StoreAccessor<String, Conversation> conversationById() {
     return conversationById;
   }
 
@@ -158,7 +162,16 @@ public final class Model {
     messageByText.insert(message.content, message);
   }
 
-  public StoreAccessor<Uuid, Message> messageById() {
+  public String newUserId() {
+    DatabaseReference newUserRef = usersRef.push();
+
+    String newUserId = newUserRef.getKey();
+    System.out.println("New user id: " + newUserId);
+
+    return newUserId;
+  }
+
+  public StoreAccessor<String, Message> messageById() {
     return messageById;
   }
 
