@@ -16,23 +16,23 @@ package codeu.chat.common;
 
 import java.lang.IllegalStateException;
 
-public final class LinearUuidGenerator implements Uuid.Generator {
+public final class LinearUuidGenerator {
 
   private static final class BasicUuid implements Uuid {
 
-    private final Uuid root;
-    private final int id;
+    private final String root;
+    private final String id;
 
-    public BasicUuid(Uuid root, int id) {
+    public BasicUuid(String root, String id) {
       this.root = root;
       this.id = id;
     }
 
     @Override
-    public Uuid root() { return root; }
+    public String root() { return root; }
 
     @Override
-    public int id() { return id; }
+    public String id() { return id; }
   }
 
   private final Uuid commonRoot;
@@ -48,17 +48,18 @@ public final class LinearUuidGenerator implements Uuid.Generator {
     this.current = start;
   }
 
-  @Override
-  public Uuid make() {
-    return Uuids.complete(new BasicUuid(commonRoot, next()));
+
+  public String make() {
+//    /return Uuids.complete(new BasicUuid(commonRoot, next()));
+    return new String("Hello");
   }
 
-  private int next() {
+  private String next() {
     if (current == end) {
       throw new IllegalStateException("Uuid overflow");
     } else {
       current++;
-      return current;
+      return Integer.toString(current);
     }
   }
 }

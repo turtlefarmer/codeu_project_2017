@@ -39,7 +39,7 @@ public final class ClientConversation {
   private ClientMessage messageContext = null;
 
   // This is the set of conversations known to the server.
-  private final Map<Uuid, ConversationSummary> summariesByUuid = new HashMap<>();
+  private final Map<String, ConversationSummary> summariesByUuid = new HashMap<>();
 
   // This is the set of conversations known to the server, sorted by title.
   private Store<String, ConversationSummary> summariesSortedByTitle =
@@ -76,7 +76,7 @@ public final class ClientConversation {
     return currentSummary;
   }
 
-  public Uuid getCurrentId() { return (currentSummary != null) ? currentSummary.id : null; }
+  public String getCurrentId() { return (currentSummary != null) ? currentSummary.id : null; }
 
   public int currentMessageCount() {
     return messageContext.currentMessageCount();
@@ -86,7 +86,7 @@ public final class ClientConversation {
     printConversation(currentSummary, userContext);
   }
 
-  public void startConversation(String title, Uuid owner) {
+  public void startConversation(String title, String owner) {
     final boolean validInputs = isValidTitle(title);
 
     final Conversation conv = (validInputs) ? controller.newConversation(title, owner) : null;
@@ -114,7 +114,7 @@ public final class ClientConversation {
   }
 
   // Get a single conversation from the server.
-  public Conversation getConversation(Uuid conversationId) {
+  public Conversation getConversation(String conversationId) {
     for (final Conversation c : view.getConversations(Arrays.asList(conversationId))) {
       return c;
     }

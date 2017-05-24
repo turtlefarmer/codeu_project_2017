@@ -26,11 +26,11 @@ public interface Uuid {
   // As the generator is in a way a replacement for a constructor, it felt
   // better to place it inside the Uuid rather than have it side equal to
   // Uuid.
-  interface Generator {
-    Uuid make();
-  }
+//  interface Generator {
+//    String make();
+//  }
 
-  Uuid root();
-  int id();
+  String root();
+  String id();
 
 }

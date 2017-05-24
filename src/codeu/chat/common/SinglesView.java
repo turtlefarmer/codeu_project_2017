@@ -14,11 +14,6 @@
 
 package codeu.chat.common;
 
-import codeu.chat.common.Conversation;
-import codeu.chat.common.Message;
-import codeu.chat.common.User;
-import codeu.chat.common.Uuid;
-
 // SINGLES VIEW
 //
 // A view as part of the Model-View-Controller pattern. This view is
@@ -29,18 +24,18 @@ public interface SinglesView {
   //
   // Find the user whose id matches the given id. If no user's id matches
   // the given id, null with be returned.
-  User findUser(Uuid id);
+  User findUser(String id);
 
   // FIND CONVERSATION
   //
   // Find the conversation whose id matches the given id. If no conversation's
   // matches the given id, null will be returned.
-  Conversation findConversation(Uuid id);
+  Conversation findConversation(String id);
 
   // FIND MESSAGE
   //
   // Find the message whose id matches the given id. if no message's id
   // matches the given id, null will be returned.
-  Message findMessage(Uuid id);
+  Message findMessage(String id);
 
 }

@@ -29,7 +29,7 @@ public interface BasicController {
   //   or else the server won't apply the change. If the operation is
   //   successful, a Message object will be returned representing the full
   //   state of the message on the server.
-  Message newMessage(Uuid author, Uuid conversation, String body);
+  Message newMessage(String author, String conversation, String body);
 
   // NEW USER
   //
@@ -47,6 +47,6 @@ public interface BasicController {
   //  operation is successful, a Conversation object will be returned
   //  representing the full state of the conversation on the server.
   //  Whether conversations can have the same title is undefined.
-  Conversation newConversation(String title, Uuid owner);
+  Conversation newConversation(String title, String owner);
 
 }

@@ -26,7 +26,7 @@ public final class Serializers {
 
     @Override
     public void write(OutputStream out, Boolean value) throws IOException {
-      out.write(value ? 1 : 0);
+      //out.write(value ? 1 : 0);
     }
 
     @Override
@@ -66,7 +66,7 @@ public final class Serializers {
     public void write(OutputStream out, Long value) throws IOException {
 
       for (int i = 56; i >= 0; i -= 8) {
-        out.write((int)(0xFF & (value >>> i)));
+        //out.write((int)(0xFF & (value >>> i)));
       }
 
     }
@@ -90,8 +90,8 @@ public final class Serializers {
     @Override
     public void write(OutputStream out, byte[] value) throws IOException {
 
-      INTEGER.write(out, value.length);
-      out.write(value);
+      //INTEGER.write(out, value.length);
+      //out.write(value);
 
     }
 
@@ -115,7 +115,7 @@ public final class Serializers {
     @Override
     public void write(OutputStream out, String value) throws IOException {
 
-      BYTES.write(out, value.getBytes());
+      //BYTES.write(out, value.getBytes());
 
     }
 
@@ -133,10 +133,10 @@ public final class Serializers {
 
       @Override
       public void write(OutputStream out, Collection<T> value) throws IOException {
-        INTEGER.write(out, value.size());
-        for (final T x : value) {
-          serializer.write(out, x);
-        }
+//        INTEGER.write(out, value.size());
+//        for (final T x : value) {
+//          serializer.write(out, x);
+//        }
       }
 
       @Override
