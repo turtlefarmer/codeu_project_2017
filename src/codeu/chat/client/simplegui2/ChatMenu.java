@@ -17,6 +17,11 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * Created by nora on 4/6/17.
@@ -200,7 +205,12 @@ public class ChatMenu {
                 } else if (!clientContext.conversation.hasCurrent()) {
                     AlertBox alertNoInput= new AlertBox("Cannot send message","No current conversations");
                     alertNoInput.display();
-                } else {
+                }
+                else if(containsBadLanguage(textBox.getText())){
+                    AlertBox alertNoInput= new AlertBox("Cannot send message","Cannot send an omitted word");
+                    alertNoInput.display();
+                }
+                else {
                     final String messageText = textBox.getText();
                     if (messageText != null && messageText.length() > 0) {
                         clientContext.message.addMessage(
@@ -246,5 +256,91 @@ public class ChatMenu {
 
             messageListModel.addElement(displayString);
         }
+    }
+
+    //pulls each word out of line and checks against list of omitted words
+    private boolean containsBadLanguage(String userLine){
+
+        boolean containsBadWord=false;
+        int size= userLine.length();
+        int position=0;
+
+        ArrayList<String> separators = new ArrayList<>();
+        commonSeparators(separators);
+
+
+        String[] omittedWords= {"fuck", "bitch", "ass", "shit","damnit", "dammit", "hoe", "faggot"};
+
+        while(position <size && !containsBadWord){
+
+            String singleWord = nextWordOrSeparator(userLine, position,  separators);
+            singleWord = singleWord.toLowerCase();
+            for (String omitted: omittedWords) {
+                if(singleWord.contains(omitted)){
+                    containsBadWord=true;
+                }
+            }
+            position+= singleWord.length();
+        }
+
+        return containsBadWord;
+
+
+
+    }
+
+    //returns a single word or a group of separators from starting position
+    private static String nextWordOrSeparator(String text, int position,
+                                              ArrayList<String> separators) {
+        assert text != null : "Violation of: text is not null";
+        assert separators != null : "Violation of: separators is not null";
+        assert 0 <= position : "Violation of: 0 <= position";
+        assert position < text.length() : "Violation of: position < |text|";
+
+        boolean wordOrSep = separators
+                .contains(text.substring(position, position + 1));
+        int length = 0;
+
+        //while characters match type of first found, increment length
+        while (position + length < text.length()
+                && separators.contains(text.substring(position + length,
+                position + length + 1)) == wordOrSep) {
+
+            length++;
+
+        }
+
+        //return the substring of given word or sep
+        return text.substring(position, position + length);
+    }
+
+    private static void commonSeparators(ArrayList<String> sep) {
+
+        sep.clear();
+
+        sep.add("\t");
+        sep.add("\n");
+        sep.add("\r");
+        sep.add(".");
+        sep.add(",");
+        sep.add(" ");
+        sep.add("?");
+        sep.add("\'");
+        sep.add("\"");
+        sep.add("-");
+        sep.add("!");
+        sep.add(";");
+        sep.add(":");
+        sep.add("/");
+        sep.add("\\");
+        sep.add("(");
+        sep.add(")");
+        sep.add("[");
+        sep.add("]");
+        sep.add("{");
+        sep.add("}");
+        sep.add("*");
+        sep.add("`");
+
     }
 }
