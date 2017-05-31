@@ -1,6 +1,8 @@
 package codeu.chat.client.simplegui2;
 
 import codeu.chat.client.ClientContext;
+import codeu.chat.common.ConversationSummary;
+import codeu.chat.common.Message;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -14,37 +16,27 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+
 /**
  * Created by nora on 4/6/17.
  */
 public class ChatMenu {
 
-private final ClientContext clientContext;
+
 
     private BorderPane mainWindow;
     private Scene scene;
     private Stage stage;
+    private final ClientContext clientContext;
+    private final DefaultListModel<String> messageListModel = new DefaultListModel<>();
+
 
     //ChatMenu constructor
     public ChatMenu(ClientContext clientContext){
         this.clientContext=clientContext;
 
-
-        initialize();
-        stage = new Stage();
-        scene= new Scene(mainWindow);
-        stage.setScene(scene);
-
-    }
-
-    //Public method to call in order to display the main chat stage
-    public void display(){
-        stage.show();
-    }
-
-    //initializes the different panels within the grid layout
-    private void initialize(){
-
+        //initializes the different panels within the grid layout
         mainWindow=new BorderPane();
         mainWindow.setMinHeight(700);
         mainWindow.setMinWidth(700);
@@ -55,7 +47,19 @@ private final ClientContext clientContext;
         mainWindow.setBottom(textBar());
         mainWindow.setCenter(centralTextBox());
 
+        stage = new Stage();
+        scene= new Scene(mainWindow);
+        stage.setScene(scene);
+
+        getAllMessages(clientContext.conversation.getCurrent());
+
     }
+
+    //Public method to call in order to display the main chat stage
+    public void display(){
+        stage.show();
+    }
+
 
     private HBox topMenuBar(){
 
@@ -93,7 +97,23 @@ private final ClientContext clientContext;
         addUser.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                NewUser user1=new NewUser(clientContext);
+
+
+                if (clientContext.user.hasCurrent()) {
+
+                    AlertBox alertNoUser = new AlertBox("A user is signed in.", "Please sign out first.");
+                    alertNoUser.display();
+
+                } else {
+                    NewUser addNewUser=new NewUser(clientContext);
+                    final String s=addNewUser.getInput();
+                    if (s != null && s.length() > 0) {
+                        clientContext.user.addUser(s);
+                        clientContext.user.signInUser(s);
+
+                    }
+
+                }
             }
         });
 
@@ -109,7 +129,7 @@ private final ClientContext clientContext;
 
                     if (s != null && s.length() > 0) {
                         clientContext.conversation.startConversation(s, clientContext.user.getCurrent().id);
-                        //ConversationPanel.this.getAllConversations(listModel);
+
                     }
                 } else {
                     AlertBox alertNoUser = new AlertBox("You are not signed in.", "Please sign in before joining a conversation.");
@@ -125,7 +145,7 @@ private final ClientContext clientContext;
         return topbar;
     }
 
-    private static VBox sideBar(){
+    private VBox sideBar(){
 
         //create sidebar
         VBox sidebar= new VBox(5);
@@ -150,7 +170,7 @@ private final ClientContext clientContext;
         return sidebar;
 
     }
-    private static HBox textBar(){
+    private HBox textBar(){
 
         //create menu at bottom
         HBox bottombar=new HBox(10);
@@ -173,7 +193,23 @@ private final ClientContext clientContext;
             @Override
             public void handle(ActionEvent actionEvent) {
 
-                //if contains bad word, alert box
+                //if no user or current conversation, alert box
+                if (!clientContext.user.hasCurrent()) {
+                    AlertBox alertNoInput= new AlertBox("Cannot send message","You are not signed in");
+                    alertNoInput.display();
+                } else if (!clientContext.conversation.hasCurrent()) {
+                    AlertBox alertNoInput= new AlertBox("Cannot send message","No current conversations");
+                    alertNoInput.display();
+                } else {
+                    final String messageText = textBox.getText();
+                    if (messageText != null && messageText.length() > 0) {
+                        clientContext.message.addMessage(
+                                clientContext.user.getCurrent().id,
+                                clientContext.conversation.getCurrentId(),
+                                messageText);
+                        ChatMenu.this.getAllMessages(clientContext.conversation.getCurrent());
+                    }
+                }
 
             }
         });
@@ -196,5 +232,19 @@ private final ClientContext clientContext;
         centralBox.getChildren().addAll(messages);
 
         return centralBox;
+    }
+
+    private void getAllMessages(ConversationSummary conversation) {
+        messageListModel.clear();
+
+        for (final Message m : clientContext.message.getConversationContents(conversation)) {
+            // Display author name if available.  Otherwise display the author UUID.
+            final String authorName = clientContext.user.getName(m.author);
+
+            final String displayString = String.format("%s: [%s]: %s",
+                    ((authorName == null) ? m.author : authorName), m.creation, m.content);
+
+            messageListModel.addElement(displayString);
+        }
     }
 }

@@ -15,27 +15,19 @@ import javafx.stage.Stage;
 public final class AlertBox {
 
     private Stage window;
-    private Label label1;
+    private Label alertLabel;
     private Button closeButton;
 
     public AlertBox(String title, String message){
 
         this.window = new Stage();
-        initialize(title, message);
-    }
-    public void display() {
-
-        //shows window and waits to be closed before returning to main
-        window.showAndWait();
-    }
-    private void initialize(String title, String message){
 
         //creates window and sizing
         window.setMinWidth(500);
         window.setMaxHeight(200);
 
         //Initialize label
-        label1 = new Label(message);
+        alertLabel = new Label(message);
 
         //inhibits user functions while window is open
         window.initModality(Modality.APPLICATION_MODAL);
@@ -47,7 +39,7 @@ public final class AlertBox {
 
         //create Layout
         VBox layout = new VBox();
-        layout.getChildren().addAll(label1, closeButton);
+        layout.getChildren().addAll(alertLabel, closeButton);
 
         //set Window
         Scene mainScene = new Scene(layout);
@@ -56,8 +48,11 @@ public final class AlertBox {
         window.setTitle(title);
 
         window.setScene(mainScene);
+    }
+    public void display() {
 
-
+        //shows window and waits to be closed before returning to main
+        window.showAndWait();
     }
 
 }

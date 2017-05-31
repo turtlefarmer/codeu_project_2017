@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 public final class NewUser {
 
     private final ClientContext clientContext;
-    private final String input;
+    private String input;
     private Stage stage;
     private Scene scene;
     private BorderPane grid;
@@ -29,13 +29,6 @@ public final class NewUser {
 
         this.clientContext=clientContext;
         this.input="";
-        initialize();
-
-    }
-
-
-
-    private void initialize(){
 
 
         this.grid=new BorderPane();
@@ -48,6 +41,7 @@ public final class NewUser {
         this.stage.show();
 
     }
+
 
     private void signInBox(){
 
@@ -63,7 +57,7 @@ public final class NewUser {
 
         //Sign in button
         Button signInButton=new Button("Sign in");
-        Button close= new Button("Exit.");
+        Button close= new Button("Exit");
 
         signInButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -73,7 +67,8 @@ public final class NewUser {
                     alertNoInput.display();
                 }
                 else{
-                    clientContext.user.addUser(user.getText());
+                    input = user.getText();
+
                     stage.close();
                 }
             }
@@ -88,5 +83,9 @@ public final class NewUser {
 
         userTextInput.getChildren().addAll(logInInstruction, user, signInButton, close);
 
+    }
+
+    public String getInput(){
+        return this.input;
     }
 }
