@@ -14,12 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-HOST="$1"
-PORT="$2"
+LOCAL_MACHINE="localhost@2007"
 
-if [[ "${HOST}" == "" || "${PORT}" == "" ]] ; then
-  echo 'usage: <HOST> <PORT>'
-  exit 1
-fi
+cd './bin'
 
-java -cp ./third_party/*:./bin codeu.chat.SimpleGuiClientMain "${HOST}@${PORT}"
+java codeu.chat.SimpleGuiClientMain "$LOCAL_MACHINE"

@@ -16,7 +16,6 @@ package codeu.chat;
 
 import java.io.IOException;
 
-import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.Controller;
 import codeu.chat.client.simplegui.ChatSimpleGui;
 import codeu.chat.client.View;
@@ -48,13 +47,12 @@ final class SimpleGuiClientMain {
     try (
       final ConnectionSource source = new ClientConnectionSource(address.host, address.port)
     ) {
-      final BroadCastReceiver receiver = new BroadCastReceiver(source);
-      final Controller controller = new Controller(receiver);
-      final View view = new View(receiver);
+      final Controller controller = new Controller(source);
+      final View view = new View(source);
 
       LOG.info("Creating client...");
 
-      runClient(controller, view, receiver);
+      runClient(controller, view);
 
     } catch (Exception ex) {
       System.out.println("ERROR: Exception setting up client. Check log for details.");
@@ -62,9 +60,9 @@ final class SimpleGuiClientMain {
     }
   }
 
-  private static void runClient(Controller controller, View view, BroadCastReceiver receiver) {
+  private static void runClient(Controller controller, View view) {
 
-    final ChatSimpleGui chatSimpleGui = new ChatSimpleGui(controller, view, receiver);
+    final ChatSimpleGui chatSimpleGui = new ChatSimpleGui(controller, view);
 
     LOG.info("Created client");
 

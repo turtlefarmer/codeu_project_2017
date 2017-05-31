@@ -19,7 +19,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.ClientContext;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
@@ -37,26 +36,9 @@ public final class MessagePanel extends JPanel {
 
   private final ClientContext clientContext;
 
-  private final BroadCastReceiver receiver;
-  public MessagePanel(ClientContext clientContext, BroadCastReceiver receiver) {
+  public MessagePanel(ClientContext clientContext) {
     super(new GridBagLayout());
     this.clientContext = clientContext;
-    this.receiver = receiver;
-    clientContext.message.linkReceiver(receiver);
-    this.receiver.onBroadCast(
-        (message) -> {
-
-
-          // Display author name if available.  Otherwise display the author UUID.
-                final String authorName = clientContext.user.getName(message.author);
-
-                final String displayString = String.format("%s: [%s]: %s",
-                        ((authorName == null) ? message.author : authorName), message.creation, message.content);
-
-                messageListModel.addElement(displayString);
-            }
-    );
-
     initialize();
   }
 
@@ -204,9 +186,5 @@ public final class MessagePanel extends JPanel {
 
       messageListModel.addElement(displayString);
     }
-  }
-
-  public BroadCastReceiver getReceiver() {
-    return this.receiver;
   }
 }
