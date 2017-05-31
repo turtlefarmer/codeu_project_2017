@@ -108,7 +108,6 @@ public class SentimentScore {
 
   private void updateScore(Sentiment sentiment) {
 
-    // todo: based on the given sentiment, update the sentiment score.
     /*
      * How will a specific score impact the users current score.
      * the sentiment has both a score and a magnitude. How will they both be used in the
@@ -122,8 +121,13 @@ public class SentimentScore {
     final double nextWeighting = Math.min(this.weighting + magnitude, 50);
 
     this.score = (this.score * this.weighting) +  (score * magnitude);
-    this.score /= nextWeighting;
+    this.score /= nextWeighting == 0 ? 1 : nextWeighting;
     this.weighting = nextWeighting;
+
+    if (Double.isNaN(this.score) || Double.isNaN(this.weighting)) {
+      this.score = 0;
+      this.weighting = 0;
+    }
 
   }
 
