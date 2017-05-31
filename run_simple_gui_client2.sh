@@ -14,10 +14,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-set -e
+HOST="$1"
 
-mkdir -p bin
+PORT="$2"
 
-javac -Xlint $(find * | grep "\\.java$") -d ./bin -sourcepath ./src -cp ./third_party/junit4.jar:./bin
-javac -Xlint $(find * | grep "\\.java$") -d ./bin -sourcepath ./test -cp ./third_party/junit4.jar:./bin
-cp -f ./src/codeu/chat/client/simplegui2/*.fxml ./bin/codeu/chat/client/simplegui2
+
+
+if [[ "${HOST}" == "" || "${PORT}" == "" ]] ; then
+
+  echo 'usage: <HOST> <PORT>'
+
+  exit 1
+
+fi
+
+
+cd './bin'
+
+java codeu.chat.SimpleGuiClientMain2 "${HOST}@${PORT}"
