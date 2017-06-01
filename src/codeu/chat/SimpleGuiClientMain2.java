@@ -14,6 +14,7 @@
 
 package codeu.chat;
 
+import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.Controller;
 import codeu.chat.client.View;
 import codeu.chat.client.simplegui2.MainGui;
@@ -60,12 +61,13 @@ public class SimpleGuiClientMain2 extends Application{
     try (
             final ConnectionSource source = new ClientConnectionSource(address.host, address.port)
     ) {
-      final Controller controller = new Controller(source);
-      final View view = new View(source);
+      final BroadCastReceiver receiver = new BroadCastReceiver(source);
+      final Controller controller = new Controller(receiver);
+      final View view = new View(receiver);
 
       LOG.info("Creating client...");
 
-      final MainGui chatGui = new MainGui(controller, view);
+      final MainGui chatGui = new MainGui(controller, view, receiver);
 
       LOG.info("Created client");
 
