@@ -77,6 +77,7 @@ public final class Model {
   private final String MESSAGES = "messages";
   private final String CONVERSATIONS = "conversations";
 
+  // FireBase database reference for class
   private static DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
   public void add(User user) {

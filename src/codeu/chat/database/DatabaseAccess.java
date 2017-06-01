@@ -20,7 +20,6 @@ public class DatabaseAccess {
         try {
             FileInputStream serviceAccount =
                 new FileInputStream(account);
-            // LOG.info("Using service account key is: %s", account);
 
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredential(FirebaseCredentials.fromCertificate(serviceAccount))
@@ -28,10 +27,7 @@ public class DatabaseAccess {
                     .build();
 
             FirebaseApp.initializeApp(options);
-            //LOG.info("Service account key valid");
-            //LOG.info("Database initiliazed");
         } catch (IOException e) {
-            //LOG.error("Failed to load service account key: %s", e.toString());
             System.out.println(e.toString());
         }
     }
