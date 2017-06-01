@@ -22,13 +22,6 @@ import codeu.chat.util.RemoteAddress;
 import codeu.chat.util.connections.ClientConnectionSource;
 import codeu.chat.util.connections.ConnectionSource;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -41,7 +34,7 @@ public class SimpleGuiClientMain2 extends Application{
 
   public static void main(String [] args) {
 
-      arguments=args;
+      arguments = args;
       launch(args);
   }
 
@@ -87,14 +80,4 @@ public class SimpleGuiClientMain2 extends Application{
 
   }
 
-  private static void runClient(Controller controller, View view) {
-
-    final MainGui chatGui = new MainGui(controller, view);
-
-    LOG.info("Created client");
-
-    chatGui.start();
-
-    LOG.info("chat client is running.");
-  }
 }

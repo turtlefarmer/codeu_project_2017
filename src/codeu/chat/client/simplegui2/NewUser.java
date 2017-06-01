@@ -18,74 +18,71 @@ import javafx.stage.Stage;
  */
 public final class NewUser {
 
-    private final ClientContext clientContext;
-    private String input;
-    private Stage stage;
-    private Scene scene;
-    private BorderPane grid;
-    private VBox userTextInput;
+  private final ClientContext clientContext;
+  private String input;
+  private Stage stage;
+  private Scene scene;
+  private BorderPane grid;
+  private VBox userTextInput;
 
-    public NewUser(ClientContext clientContext){
+  public NewUser(ClientContext clientContext) {
 
-        this.clientContext=clientContext;
-        this.input="";
+    this.clientContext = clientContext;
+    this.input = "";
 
+    this.grid = new BorderPane();
+    signInBox();
+    grid.setCenter(this.userTextInput);
+    this.scene = new Scene(this.grid);
+    this.stage = new Stage();
+    this.stage.setScene(this.scene);
 
-        this.grid=new BorderPane();
-        signInBox();
-        grid.setCenter(this.userTextInput);
-        this.scene= new Scene(this.grid);
-        this.stage=new Stage();
-        this.stage.setScene(this.scene);
+    this.stage.show();
 
-        this.stage.show();
-
-    }
-
-
-    private void signInBox(){
-
-        userTextInput=new VBox();
-
-        //userName text field
-        TextArea user=new TextArea();
+  }
 
 
+  private void signInBox() {
 
-        //Instruction Label
-        Label logInInstruction=new Label("Enter your username:");
+    userTextInput = new VBox();
 
-        //Sign in button
-        Button signInButton=new Button("Sign in");
-        Button close= new Button("Exit");
+    //userName text field
+    TextArea user = new TextArea();
 
-        signInButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                if(user.getText() == null || user.getText().trim().equals("")){
-                    AlertBox alertNoInput= new AlertBox("Empty Username Field", "Please enter a valid username.");
-                    alertNoInput.display();
-                }
-                else{
-                    input = user.getText();
+    //Instruction Label
+    Label logInInstruction = new Label("Enter your username:");
 
-                    stage.close();
-                }
-            }
-        });
+    //Sign in button
+    Button signInButton = new Button("Sign in");
+    Button close = new Button("Exit");
 
-        close.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                stage.close();
-            }
-        });
+    signInButton.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+      public void handle(ActionEvent actionEvent) {
+        if (user.getText() == null || user.getText().trim().equals("")) {
+          AlertBox alertNoInput = new AlertBox("Empty Username Field",
+              "Please enter a valid username.");
+          alertNoInput.display();
+        } else {
+          input = user.getText();
 
-        userTextInput.getChildren().addAll(logInInstruction, user, signInButton, close);
+          stage.close();
+        }
+      }
+    });
 
-    }
+    close.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+      public void handle(ActionEvent actionEvent) {
+        stage.close();
+      }
+    });
 
-    public String getInput(){
-        return this.input;
-    }
+    userTextInput.getChildren().addAll(logInInstruction, user, signInButton, close);
+
+  }
+
+  public String getInput() {
+    return this.input;
+  }
 }

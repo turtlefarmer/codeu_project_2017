@@ -67,7 +67,7 @@ public final class ChatSimpleGui {
     mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     mainFrame.setSize(790, 450);
 
-    // MainGui View - outermost graphics panel.
+    // Main View - outermost graphics panel.
     final JPanel mainViewPanel = new JPanel(new GridBagLayout());
     mainViewPanel.setBorder(paneBorder());
 

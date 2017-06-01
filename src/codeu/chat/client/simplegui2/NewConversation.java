@@ -16,72 +16,71 @@ import javafx.stage.Stage;
  */
 public final class NewConversation {
 
-    private final ClientContext clientContext;
-    private final String title;
-    private final Button button;
-    private String input;
-    private final Stage stage;
+  private final ClientContext clientContext;
+  private final String title;
+  private final Button button;
+  private String input;
+  private final Stage stage;
 
-    public NewConversation(ClientContext clientContext, String title, String button){
+  public NewConversation(ClientContext clientContext, String title, String button) {
 
-        this.clientContext=clientContext;
-        this.title=title;
-        this.button=new Button(button);
-        this.stage=new Stage();
-        this.input="";
+    this.clientContext = clientContext;
+    this.title = title;
+    this.button = new Button(button);
+    this.stage = new Stage();
+    this.input = "";
 
-        initialize();
+    initialize();
 
-    }
-
-
-    private void initialize(){
+  }
 
 
-        BorderPane grid =new BorderPane();
-        VBox userTextInput=new VBox();
-        grid.setCenter(userTextInput);
+  private void initialize() {
 
-        Scene scene= new Scene(grid);
+    BorderPane grid = new BorderPane();
+    VBox userTextInput = new VBox();
+    grid.setCenter(userTextInput);
 
-        //userName text field
-        TextArea conversationName=new TextArea();
+    Scene scene = new Scene(grid);
 
-        //Instruction Label
-        Label logInInstruction=new Label(this.title);
+    //userName text field
+    TextArea conversationName = new TextArea();
 
-        //Sign in button
+    //Instruction Label
+    Label logInInstruction = new Label(this.title);
 
-        this.button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
+    //Sign in button
 
+    this.button.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+      public void handle(ActionEvent actionEvent) {
 
-                if(conversationName.getText() == null || conversationName.getText().trim().equals("")){
-                    AlertBox alertNoInput= new AlertBox("Empty Conversation Field", "Please enter a new conversation name.");
-                    alertNoInput.display();
-                }
-                else{
-                    input = conversationName.getText();
-                    stage.close();
+        if (conversationName.getText() == null || conversationName.getText().trim().equals("")) {
+          AlertBox alertNoInput = new AlertBox("Empty Conversation Field",
+              "Please enter a new conversation name.");
+          alertNoInput.display();
+        } else {
+          input = conversationName.getText();
+          stage.close();
 
-                }
-            }
-        });
+        }
+      }
+    });
 
-        userTextInput.getChildren().addAll(logInInstruction, conversationName, this.button);
-        this.stage.setScene(scene);
+    userTextInput.getChildren().addAll(logInInstruction, conversationName, this.button);
+    this.stage.setScene(scene);
 
-    }
-    public void enterNewConversation(){
+  }
 
-        this.stage.showAndWait();
+  public void enterNewConversation() {
 
-    }
+    this.stage.showAndWait();
 
-    public String conversationInput(){
-        return this.input;
-    }
+  }
+
+  public String conversationInput() {
+    return this.input;
+  }
 
 
 }
