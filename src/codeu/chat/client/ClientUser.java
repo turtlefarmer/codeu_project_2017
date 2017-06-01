@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import codeu.chat.common.User;
-import codeu.chat.common.Uuid;
 import codeu.chat.util.Logger;
+import codeu.chat.util.Uuid;
 import codeu.chat.util.store.Store;
 
 public final class ClientUser {
@@ -139,7 +139,7 @@ public final class ClientUser {
 
   public static String getUserInfoString(User user) {
     return (user == null) ? "Null user" :
-        String.format(" User: %s\n   Id: %s\n   created: %s\n", user.name, user.id, user.creation);
+        String.format(" User: %s\n   Id: %s\n   created: %s\n Sentiment Score: %f" , user.name, user.id, user.creation, user.sentimentScore.getScore());
   }
 
   public String showUserInfo(String uname) {

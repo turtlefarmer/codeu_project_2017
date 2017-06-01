@@ -20,9 +20,9 @@ import java.util.Map;
 
 import codeu.chat.common.Conversation;
 import codeu.chat.common.ConversationSummary;
-import codeu.chat.common.Uuid;
 import codeu.chat.util.Logger;
 import codeu.chat.util.Method;
+import codeu.chat.util.Uuid;
 import codeu.chat.util.store.Store;
 
 public final class ClientConversation {
@@ -97,9 +97,8 @@ public final class ClientConversation {
     } else {
       LOG.info("New conversation: Title= \"%s\" UUID= %s", conv.title, conv.id);
 
-      currentSummary = conv.summary;
 
-      updateAllConversations(currentSummary != null);
+      updateAllConversations(conv.summary != null);
     }
   }
 
