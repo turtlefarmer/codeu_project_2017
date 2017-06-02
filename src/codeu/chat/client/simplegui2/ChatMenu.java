@@ -10,7 +10,9 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -32,6 +34,7 @@ public class ChatMenu {
   private BorderPane mainWindow;
   private Scene scene;
   private Stage stage;
+  private ListView<String> conversationPanel;
   private final ClientContext clientContext;
   private final DefaultListModel<String> messageListModel = new DefaultListModel<>();
 
@@ -45,9 +48,35 @@ public class ChatMenu {
     mainWindow.setMinHeight(700);
     mainWindow.setMinWidth(700);
 
+    //create listView to be added to panel
+    conversationPanel = new ListView<>();
+    conversationPanel.setPadding(new Insets(3));
+    conversationPanel.setMinWidth(200);
+    //border for conversation Panel
+    conversationPanel.setStyle("-fx-padding: 10;" +
+            "-fx-border-style: solid inside;" +
+            "-fx-border-width: 4;" +
+            "-fx-border-insets: 0;" +
+            "-fx-border-radius: 5;" +
+            "-fx-border-color: #336699;");
+    //set refresh upon clicking on panel
+    conversationPanel.setOnMouseClicked(new EventHandler<MouseEvent>() {
+      @Override
+      public void handle(MouseEvent mouseEvent) {
+
+        if(conversationPanel.getItems().size()>0){
+
+        }
+      }
+    });
+
+
+
     //organize main Pane
     mainWindow.setTop(topMenuBar());
-    mainWindow.setLeft(sideBar());
+
+
+    mainWindow.setLeft(conversationPanel);
     mainWindow.setBottom(textBar());
     mainWindow.setCenter(centralTextBox());
 
@@ -134,6 +163,7 @@ public class ChatMenu {
 
           if (s != null && s.length() > 0) {
             clientContext.conversation.startConversation(s, clientContext.user.getCurrent().id);
+            addNewConversation(s);
 
           }
         } else {
@@ -150,31 +180,6 @@ public class ChatMenu {
     return topbar;
   }
 
-  private VBox sideBar() {
-
-    //create sidebar
-    VBox sidebar = new VBox(5);
-
-    sidebar.setPadding(new Insets(3));
-    sidebar.setAlignment(Pos.TOP_LEFT);
-    sidebar.setMinWidth(200);
-
-    //Label for box
-    Label sideLabel = new Label("Conversations");
-
-    //border for box
-    sidebar.setStyle("-fx-padding: 10;" +
-        "-fx-border-style: solid inside;" +
-        "-fx-border-width: 4;" +
-        "-fx-border-insets: 0;" +
-        "-fx-border-radius: 5;" +
-        "-fx-border-color: #336699;");
-
-    sidebar.getChildren().addAll(sideLabel);
-
-    return sidebar;
-
-  }
 
   private HBox textBar() {
 
@@ -340,6 +345,12 @@ public class ChatMenu {
     sep.add("}");
     sep.add("*");
     sep.add("`");
+
+  }
+
+  private void addNewConversation(String conversationName){
+
+    conversationPanel.getItems().add(conversationName);
 
   }
 }
