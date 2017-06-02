@@ -95,7 +95,7 @@ public class ChatMenu {
 
                 clientContext.conversation.setCurrent(cs);
                 //update message panel
-
+                receiver.joinConversation(cs);
 
                 break;
               }
