@@ -39,7 +39,6 @@ if [[ "${TEAM_ID}" == "" || "${TEAM_SECRET}" == "" || "${PORT}" == "" || "${PERS
   exit 1
 fi
 
-export GOOGLE_APPLICATION_CREDENTIALS=./TestingNLAPI-03ba34a1872e.json
 
 if [ "${RELAY_ADDRESS}" == "" ] ; then
   java -cp ./third_party/*:./bin codeu.chat.ServerMain \
