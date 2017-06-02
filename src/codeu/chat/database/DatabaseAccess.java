@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class DatabaseAccess {
-    private final String account = "/home/greg/Dropbox/gproj/codeu_project_2017/third_party/codeu-56fe6-firebase-adminsdk-6et4u-e78898c410.json";
+    private final String account = "./third_party/codeu-56fe6-firebase-adminsdk-6et4u-e78898c410.json";
     private final String databaseUrl = "https://codeu-56fe6.firebaseio.com";
 
     public void initialize() {

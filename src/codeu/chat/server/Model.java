@@ -169,7 +169,6 @@ public final class Model {
 
 
   public void load(User user) {
-    // ensure UserModel has been converted to User
     userById.insert(user.id, user);
     userByTime.insert(user.creation, user);
     userByText.insert(user.name, user);

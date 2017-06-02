@@ -1,10 +1,13 @@
 package codeu.chat.database;
 
+import codeu.chat.common.Conversation;
 import codeu.chat.database.model.ConversationModel;
 import codeu.chat.database.model.UserModel;
 import com.google.firebase.database.*;
 
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by greg on 6/1/17.
@@ -18,7 +21,8 @@ public class DatabaseStartup {
     private static DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
     // change to returnable list
-    public void loadUsers() {
+    public Map<String, UserModel> getUsers() {
+        Map<String, UserModel> usersMap = new HashMap<>();
         DatabaseReference usersRef = database.child(USERS_CHILD);
         usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -26,9 +30,11 @@ public class DatabaseStartup {
                 Iterator<DataSnapshot> usersIterator = dataSnapshot.getChildren().iterator();
                 while (usersIterator.hasNext()) {
                     UserModel user = usersIterator.next().getValue(UserModel.class);
+                    String key = user.id;
                     System.out.println("ID: " + user.id);
                     System.out.println("Name: " + user.name);
                     System.out.println("Creation: " + user.creation);
+                    usersMap.put(key, user);
                 }
             }
 
@@ -37,9 +43,11 @@ public class DatabaseStartup {
                 System.out.println("The read failed: " + databaseError.getCode());
             }
         });
+        return usersMap;
     }
     // change to returnable list
-    public void loadConversations() {
+    public Map<String, ConversationModel> getConversations() {
+        Map<String, ConversationModel> convosMap = new HashMap<>();
         DatabaseReference convosRef = database.child(CONVERSATIONS_CHILD);
         convosRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -47,10 +55,12 @@ public class DatabaseStartup {
                 Iterator<DataSnapshot> convosIterator = dataSnapshot.getChildren().iterator();
                 while (convosIterator.hasNext()) {
                     ConversationModel convo = convosIterator.next().getValue(ConversationModel.class);
+                    String key = convo.id;
                     System.out.println("ID: " + convo.id);
                     System.out.println("Title: " + convo.title);
                     System.out.println("Owner: " + convo.owner);
                     System.out.println("Creation: " + convo.creation);
+                    convosMap.put(key, convo);
                 }
             }
 
@@ -59,5 +69,6 @@ public class DatabaseStartup {
                 System.out.println("The read failed: " + databaseError.getCode());
             }
         });
+        return convosMap;
     }
 }

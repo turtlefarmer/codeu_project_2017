@@ -67,8 +67,8 @@ final class ServerMain {
       LOG.info("FireBase intialized");
       // load users
       final DatabaseStartup dbStartup = new DatabaseStartup();
-      dbStartup.loadUsers();
-      dbStartup.loadConversations();
+      dbStartup.getUsers();
+      dbStartup.getConversations();
     } catch (Exception ex){
       LOG.error(ex, "Failed to initialize FireBase");
     }
