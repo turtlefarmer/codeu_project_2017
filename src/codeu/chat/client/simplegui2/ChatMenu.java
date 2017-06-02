@@ -86,14 +86,20 @@ public class ChatMenu {
 
             //I believe t1 is the String of the newly selected item (index?, name?)
 
+            int index=conversationPanel.getSelectionModel().getSelectedIndex();
             //if t1 is the conversation title
+
+            int localIndex=0;
             for (final ConversationSummary cs : clientContext.conversation.getConversationSummaries()) {
-              if (cs.title.equals(t1)) {
+              if (localIndex >= index && cs.title.equals(t1)) {
 
                 clientContext.conversation.setCurrent(cs);
-
                 //update message panel
+
+
+                break;
               }
+              localIndex++;
             }
 
           }
