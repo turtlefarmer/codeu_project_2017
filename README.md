@@ -1,7 +1,6 @@
 
 # CODEU CHAT SERVER | README
 
-
 ## DISCLAIMER
 
 CODEU is a program created by Google to develop the skills of future software
@@ -9,6 +8,16 @@ engineers. This project is not an offical Google Product. This project is a
 playground for those looking to develop their coding and software engineering
 skills.
 
+## DEPENDENCIES
+
+  1. Must have [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) Installed
+  Check Java version with:
+     ```
+       $ java -version
+       ```
+  1. Install the Google Cloud SDK [here](https://cloud.google.com/sdk/)
+  
+  1. Make sure it is correctly in your path before proceeding to run the server
 
 ## ENVIRONMENT
 
@@ -47,7 +56,7 @@ More Info can be found [here](https://cloud.google.com/natural-language/docs/get
 
        ```
        $ sh run_server.sh <team_id> <team_secret> <port> <persistent-dir>
-       $ sh run_client.sh <host> <port>
+       $ sh run_simple_gui_client2.sh <host> <port>
        ```
 
      You must specify the following startup arguments for `run_server.sh:
