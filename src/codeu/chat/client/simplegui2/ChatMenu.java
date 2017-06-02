@@ -4,6 +4,9 @@ import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.ClientContext;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -67,9 +70,21 @@ public class ChatMenu {
 
         if(conversationPanel.getItems().size()>0){
 
+            ObservableList<String> items = conversationPanel.getItems();
+            conversationPanel.setItems(null);
+            conversationPanel.setItems(items);
+
         }
       }
     });
+
+    //add action listener to selected item
+      conversationPanel.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+          @Override
+          public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+              
+          }
+      });
 
 
 
