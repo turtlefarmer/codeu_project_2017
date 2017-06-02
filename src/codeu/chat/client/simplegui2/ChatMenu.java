@@ -63,6 +63,7 @@ public class ChatMenu {
             "-fx-border-insets: 0;" +
             "-fx-border-radius: 5;" +
             "-fx-border-color: #336699;");
+
     //set refresh upon clicking on panel
     conversationPanel.setOnMouseClicked(new EventHandler<MouseEvent>() {
       @Override
@@ -82,7 +83,19 @@ public class ChatMenu {
       conversationPanel.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
           @Override
           public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-              
+
+            //I believe t1 is the String of the newly selected item (index?, name?)
+
+            //if t1 is the conversation title
+            for (final ConversationSummary cs : clientContext.conversation.getConversationSummaries()) {
+              if (cs.title.equals(t1)) {
+
+                clientContext.conversation.setCurrent(cs);
+
+                //update message panel
+              }
+            }
+
           }
       });
 
