@@ -64,21 +64,6 @@ public class ChatMenu {
             "-fx-border-radius: 5;" +
             "-fx-border-color: #336699;");
 
-    //set refresh upon clicking on panel
-    conversationPanel.setOnMouseClicked(new EventHandler<MouseEvent>() {
-      @Override
-      public void handle(MouseEvent mouseEvent) {
-
-        if(conversationPanel.getItems().size()>0){
-
-            ObservableList<String> items = conversationPanel.getItems();
-            conversationPanel.setItems(null);
-            conversationPanel.setItems(items);
-
-        }
-      }
-    });
-
     //add action listener to selected item
       conversationPanel.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
           @Override
@@ -103,6 +88,13 @@ public class ChatMenu {
             }
 
           }
+      });
+
+      conversationPanel.setOnMouseEntered(new EventHandler<MouseEvent>() {
+        @Override
+        public void handle(MouseEvent event) {
+          updateConversationPanel(conversationPanel);
+        }
       });
 
 
@@ -199,7 +191,10 @@ public class ChatMenu {
 
           if (s != null && s.length() > 0) {
             clientContext.conversation.startConversation(s, clientContext.user.getCurrent().id);
-            addNewConversation(s);
+
+            for (ConversationSummary cs: clientContext.conversation.getConversationSummaries()) {
+              addNewConversation(cs.title);
+            }
 
           }
         } else {
@@ -399,4 +394,17 @@ public class ChatMenu {
     conversationPanel.getItems().add(conversationName);
 
   }
+
+  private void updateConversationPanel(ListView<String> conversationPanel) {
+
+    System.out.println("Updating Conversations");
+    clientContext.conversation.updateAllConversations(false);
+    conversationPanel.getItems().clear();
+
+    for (ConversationSummary cs: clientContext.conversation.getConversationSummaries()) {
+      conversationPanel.getItems().add(cs.title);
+    }
+
+  }
+
 }
