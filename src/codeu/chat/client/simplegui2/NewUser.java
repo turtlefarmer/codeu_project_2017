@@ -8,7 +8,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -47,7 +47,7 @@ public final class NewUser {
     userTextInput = new VBox();
 
     //userName text field
-    TextArea user = new TextArea();
+    TextField user = new TextField();
 
     //Instruction Label
     Label logInInstruction = new Label("Enter your username:");
