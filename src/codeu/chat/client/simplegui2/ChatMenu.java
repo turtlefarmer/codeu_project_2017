@@ -1,5 +1,6 @@
 package codeu.chat.client.simplegui2;
 
+import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.ClientContext;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
@@ -37,12 +38,12 @@ public class ChatMenu {
   private ListView<String> conversationPanel;
   private final ClientContext clientContext;
   private final DefaultListModel<String> messageListModel = new DefaultListModel<>();
-
+  private final BroadCastReceiver receiver;
 
   //ChatMenu constructor
-  public ChatMenu(ClientContext clientContext) {
+  public ChatMenu(ClientContext clientContext, BroadCastReceiver receiver) {
     this.clientContext = clientContext;
-
+    this.receiver = receiver;
     //initializes the different panels within the grid layout
     mainWindow = new BorderPane();
     mainWindow.setMinHeight(700);
@@ -85,6 +86,7 @@ public class ChatMenu {
     stage.setScene(scene);
 
     getAllMessages(clientContext.conversation.getCurrent());
+    receiver.start();
 
   }
 
@@ -236,7 +238,7 @@ public class ChatMenu {
 
   }
 
-  private static VBox centralTextBox() {
+  private VBox centralTextBox() {
 
     VBox centralBox = new VBox();
 
@@ -246,6 +248,16 @@ public class ChatMenu {
     messages.setWrapText(true);
 
     centralBox.getChildren().addAll(messages);
+
+    this.receiver.onBroadCast((Message message) -> {
+
+      final String authorName = clientContext.user.getName(message.author);
+
+      final String displayString = String.format("%s: [%s]: %s",
+          ((authorName == null) ? message.author : authorName), message.creation, message.content);
+
+      messages.appendText("\n" + displayString);
+    });
 
     return centralBox;
   }
