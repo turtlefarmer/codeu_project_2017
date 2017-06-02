@@ -33,7 +33,7 @@ public final class AlertBox {
     window.initModality(Modality.APPLICATION_MODAL);
 
     //Button 1
-    closeButton = new Button("Okay.");
+    closeButton = new Button("Okay");
     closeButton.setOnAction(e -> window.close());
 
     //create Layout

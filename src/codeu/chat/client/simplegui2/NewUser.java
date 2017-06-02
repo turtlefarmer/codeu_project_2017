@@ -37,7 +37,7 @@ public final class NewUser {
     this.stage = new Stage();
     this.stage.setScene(this.scene);
 
-    this.stage.show();
+    this.stage.showAndWait();
 
   }
 
