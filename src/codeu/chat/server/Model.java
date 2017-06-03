@@ -14,10 +14,7 @@
 
 package codeu.chat.server;
 
-import java.util.Comparator;
-
 import codeu.chat.common.Conversation;
-import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.LinearUuidGenerator;
 import codeu.chat.common.Message;
 import codeu.chat.common.User;
@@ -25,6 +22,12 @@ import codeu.chat.util.Time;
 import codeu.chat.util.Uuid;
 import codeu.chat.util.store.Store;
 import codeu.chat.util.store.StoreAccessor;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class Model {
 
@@ -68,12 +71,30 @@ public final class Model {
   private final Uuid.Generator userGenerations = new LinearUuidGenerator(null, 1, Integer.MAX_VALUE);
   private Uuid currentUserGeneration = userGenerations.make();
 
+  private final String USERS_CHILD = "users";
+  private final String MESSAGES_CHILD = "messages";
+  private final String CONVERSATIONS_CHILD = "conversations";
+
+  // FireBase database reference for class
+  private static DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+
   public void add(User user) {
     currentUserGeneration = userGenerations.make();
 
     userById.insert(user.id, user);
     userByTime.insert(user.creation, user);
     userByText.insert(user.name, user);
+
+    DatabaseReference usersRef = database.child(USERS_CHILD);
+
+    // FireBase creates a child element with "/"
+    Map<String, Object> userMap  = new HashMap<>();
+    userMap.put(user.id.toString() + "/" + "id", user.id.toString());
+    userMap.put(user.id.toString() + "/" + "name", user.name.toString());
+    userMap.put(user.id.toString() + "/" + "creation", user.creation.toString());
+
+    // updates FireBase with users
+    usersRef.updateChildren(userMap);
   }
 
   public StoreAccessor<Uuid, User> userById() {
@@ -96,6 +117,18 @@ public final class Model {
     conversationById.insert(conversation.id, conversation);
     conversationByTime.insert(conversation.creation, conversation);
     conversationByText.insert(conversation.title, conversation);
+
+    DatabaseReference convosRef = database.child(CONVERSATIONS_CHILD);
+
+    // FireBase creates a child element with "/"
+    Map<String, Object> convosMap = new HashMap<>();
+    convosMap.put(conversation.id.toString() + "/id", conversation.id.toString());
+    convosMap.put(conversation.id.toString() + "/title", conversation.title);
+    convosMap.put(conversation.id.toString() + "/creation", conversation.creation.toString());
+    convosMap.put(conversation.id.toString() + "/owner" , conversation.owner.toString());
+
+    // updates FireBase database with conversation
+    convosRef.updateChildren(convosMap);
   }
 
   public StoreAccessor<Uuid, Conversation> conversationById() {
@@ -114,6 +147,18 @@ public final class Model {
     messageById.insert(message.id, message);
     messageByTime.insert(message.creation, message);
     messageByText.insert(message.content, message);
+
+    DatabaseReference messagesRef = database.child(MESSAGES_CHILD);
+
+    // FireBase creates a child element with "/"
+    Map<String, Object> messagesMap = new HashMap<>();
+    messagesMap.put(message.id.toString() + "/id", message.id.toString());
+    messagesMap.put(message.id.toString() + "/creation", message.creation.toString());
+    messagesMap.put(message.id.toString() + "/content", message.content.toString());
+    messagesMap.put(message.id.toString() + "/author", message.author.toString());
+
+    // updates FireBase with message
+    messagesRef.updateChildren(messagesMap);
   }
 
   public StoreAccessor<Uuid, Message> messageById() {
@@ -126,5 +171,26 @@ public final class Model {
 
   public StoreAccessor<String, Message> messageByText() {
     return messageByText;
+  }
+
+  /*
+    Loads users, conversations, and
+   */
+  public void load(User user) {
+    userById.insert(user.id, user);
+    userByTime.insert(user.creation, user);
+    userByText.insert(user.name, user);
+  }
+
+  public void load(Conversation conversation) {
+    conversationById.insert(conversation.id, conversation);
+    conversationByTime.insert(conversation.creation, conversation);
+    conversationByText.insert(conversation.title, conversation);
+  }
+
+  public void load(Message message) {
+    messageById.insert(message.id, message);
+    messageByTime.insert(message.creation, message);
+    messageByText.insert(message.content, message);
   }
 }

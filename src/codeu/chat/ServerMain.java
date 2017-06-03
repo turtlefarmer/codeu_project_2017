@@ -15,10 +15,9 @@
 
 package codeu.chat;
 
-import java.io.IOException;
-
 import codeu.chat.common.Relay;
 import codeu.chat.common.Secret;
+import codeu.chat.database.DatabaseAccess;
 import codeu.chat.server.NoOpRelay;
 import codeu.chat.server.RemoteRelay;
 import codeu.chat.server.Server;
@@ -29,6 +28,8 @@ import codeu.chat.util.connections.ClientConnectionSource;
 import codeu.chat.util.connections.Connection;
 import codeu.chat.util.connections.ConnectionSource;
 import codeu.chat.util.connections.ServerConnectionSource;
+
+import java.io.IOException;
 
 final class ServerMain {
 
@@ -55,6 +56,16 @@ final class ServerMain {
     } catch (IOException ex) {
       System.out.println("Invalid id - shutting down server");
       System.exit(1);
+    }
+
+    // initialize FireBase
+    try {
+      LOG.info("Initializing FireBase...");
+      final DatabaseAccess database = new DatabaseAccess();
+      database.initialize();
+      LOG.info("FireBase initialized.");
+    } catch (Exception ex){
+      LOG.error(ex, "Failed to initialize FireBase");
     }
 
     // This is the directory where it is safe to store data accross runs
