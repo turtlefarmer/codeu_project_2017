@@ -4,6 +4,7 @@ import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.ClientContext;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
+import codeu.chat.util.Time;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -21,6 +22,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import javax.swing.*;
 import java.lang.reflect.Array;
@@ -110,6 +112,15 @@ public class ChatMenu {
     stage = new Stage();
     scene = new Scene(mainWindow);
     stage.setScene(scene);
+
+    //turn off broadcast when it closes
+    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+      @Override
+      public void handle(WindowEvent windowEvent) {
+
+        receiver.exit();
+      }
+    });
 
     getAllMessages(clientContext.conversation.getCurrent());
     receiver.start();
@@ -297,7 +308,6 @@ public class ChatMenu {
     for (final Message m : clientContext.message.getConversationContents(conversation)) {
       // Display author name if available.  Otherwise display the author UUID.
       final String authorName = clientContext.user.getName(m.author);
-
       final String displayString = String.format("%s: [%s]: %s",
           ((authorName == null) ? m.author : authorName), m.creation, m.content);
 
