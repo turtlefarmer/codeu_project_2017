@@ -30,6 +30,7 @@ import codeu.chat.util.connections.ClientConnectionSource;
 import codeu.chat.util.connections.Connection;
 import codeu.chat.util.connections.ConnectionSource;
 import codeu.chat.util.connections.ServerConnectionSource;
+import codeu.chat.database.DatabaseStartup;
 
 final class ServerMain {
 
@@ -64,6 +65,10 @@ final class ServerMain {
       final DatabaseAccess database = new DatabaseAccess();
       database.initialize();
       LOG.info("FireBase intialized");
+      // load users
+      final DatabaseStartup dbStartup = new DatabaseStartup();
+      dbStartup.getUsers();
+      dbStartup.getConversations();
     } catch (Exception ex){
       LOG.error(ex, "Failed to initialize FireBase");
     }

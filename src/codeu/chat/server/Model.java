@@ -19,7 +19,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import codeu.chat.common.Conversation;
-import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.LinearUuidGenerator;
 import codeu.chat.common.Message;
 import codeu.chat.common.User;
@@ -29,7 +28,6 @@ import codeu.chat.util.store.Store;
 import codeu.chat.util.store.StoreAccessor;
 
 import com.google.firebase.database.*;
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 public final class Model {
 
@@ -73,9 +71,9 @@ public final class Model {
   private final Uuid.Generator userGenerations = new LinearUuidGenerator(null, 1, Integer.MAX_VALUE);
   private Uuid currentUserGeneration = userGenerations.make();
 
-  private final String USERS = "users";
-  private final String MESSAGES = "messages";
-  private final String CONVERSATIONS = "conversations";
+  private final String USERS_CHILD = "users";
+  private final String MESSAGES_CHILD = "messages";
+  private final String CONVERSATIONS_CHILD = "conversations";
 
   // FireBase database reference for class
   private static DatabaseReference database = FirebaseDatabase.getInstance().getReference();
@@ -87,9 +85,10 @@ public final class Model {
     userByTime.insert(user.creation, user);
     userByText.insert(user.name, user);
 
-    DatabaseReference usersRef = database.child(USERS);
+    DatabaseReference usersRef = database.child(USERS_CHILD);
 
     Map<String, Object> userMap  = new HashMap<>();
+    userMap.put(user.id.toString() + "/" + "id", user.id.toString());
     userMap.put(user.id.toString() + "/" + "name", user.name.toString());
     userMap.put(user.id.toString() + "/" + "creation", user.creation.toString());
 
@@ -117,9 +116,10 @@ public final class Model {
     conversationByTime.insert(conversation.creation, conversation);
     conversationByText.insert(conversation.title, conversation);
 
-    DatabaseReference convosRef = database.child(CONVERSATIONS);
+    DatabaseReference convosRef = database.child(CONVERSATIONS_CHILD);
 
     Map<String, Object> convosMap = new HashMap<>();
+    convosMap.put(conversation.id.toString() + "/id", conversation.id.toString());
     convosMap.put(conversation.id.toString() + "/title", conversation.title);
     convosMap.put(conversation.id.toString() + "/creation", conversation.creation.toString());
     convosMap.put(conversation.id.toString() + "/owner" , conversation.owner.toString());
@@ -144,9 +144,10 @@ public final class Model {
     messageByTime.insert(message.creation, message);
     messageByText.insert(message.content, message);
 
-    DatabaseReference messagesRef = database.child(MESSAGES);
+    DatabaseReference messagesRef = database.child(MESSAGES_CHILD);
 
     Map<String, Object> messagesMap = new HashMap<>();
+    messagesMap.put(message.id.toString() + "/id", message.id.toString());
     messagesMap.put(message.id.toString() + "/creation", message.creation.toString());
     messagesMap.put(message.id.toString() + "/content", message.content.toString());
     messagesMap.put(message.id.toString() + "/author", message.author.toString());
@@ -164,5 +165,24 @@ public final class Model {
 
   public StoreAccessor<String, Message> messageByText() {
     return messageByText;
+  }
+
+
+  public void load(User user) {
+    userById.insert(user.id, user);
+    userByTime.insert(user.creation, user);
+    userByText.insert(user.name, user);
+  }
+
+  public void load(Conversation conversation) {
+    conversationById.insert(conversation.id, conversation);
+    conversationByTime.insert(conversation.creation, conversation);
+    conversationByText.insert(conversation.title, conversation);
+  }
+
+  public void load(Message message) {
+    messageById.insert(message.id, message);
+    messageByTime.insert(message.creation, message);
+    messageByText.insert(message.content, message);
   }
 }
