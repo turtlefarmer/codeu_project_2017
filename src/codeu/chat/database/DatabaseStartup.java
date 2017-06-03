@@ -1,6 +1,7 @@
 package codeu.chat.database;
 
 import codeu.chat.database.model.ConversationModel;
+import codeu.chat.database.model.MessageModel;
 import codeu.chat.database.model.UserModel;
 import com.google.firebase.database.*;
 
@@ -16,7 +17,9 @@ public class DatabaseStartup {
     // FireBase database reference for class
     private static DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
-    // change to returnable list
+    /*
+     *  Retrieves users from FireBase
+     */
     public Map<String, UserModel> getUsers() {
         Map<String, UserModel> usersMap = new HashMap<>();
         DatabaseReference usersRef = database.child(USERS_CHILD);
@@ -38,7 +41,9 @@ public class DatabaseStartup {
         });
         return usersMap;
     }
-    // change to returnable list
+    /*
+     *  Retrieves conversations from FireBase
+     */
     public Map<String, ConversationModel> getConversations() {
         Map<String, ConversationModel> convosMap = new HashMap<>();
         DatabaseReference convosRef = database.child(CONVERSATIONS_CHILD);
@@ -59,5 +64,29 @@ public class DatabaseStartup {
             }
         });
         return convosMap;
+    }
+    /*
+ *  Retrieves messages from FireBase
+ */
+    public Map<String, MessageModel> getMessages() {
+        Map<String, MessageModel> messagesMap = new HashMap<>();
+        DatabaseReference messagesRef = database.child(MESSAGES_CHILD);
+        messagesRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Iterator<DataSnapshot> messagesIterator = dataSnapshot.getChildren().iterator();
+                while (messagesIterator.hasNext()) {
+                    MessageModel message = messagesIterator.next().getValue(MessageModel.class);
+                    String key = message.id;
+                    messagesMap.put(key, message);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                System.out.println("The read failed: " + databaseError.getCode());
+            }
+        });
+        return messagesMap;
     }
 }

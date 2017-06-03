@@ -1,13 +1,10 @@
 package codeu.chat.database.model;
 
-/**
- * Created by greg on 6/1/17.
- */
 public class MessageModel {
-    String id;
-    String author;
-    String content;
-    String creation;
+    public String id;
+    public String author;
+    public String content;
+    public String creation;
 
     public MessageModel(String author, String content, String creation) {
         this.author = author;

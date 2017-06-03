@@ -14,10 +14,6 @@
 
 package codeu.chat.server;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-
 import codeu.chat.common.Conversation;
 import codeu.chat.common.LinearUuidGenerator;
 import codeu.chat.common.Message;
@@ -26,8 +22,12 @@ import codeu.chat.util.Time;
 import codeu.chat.util.Uuid;
 import codeu.chat.util.store.Store;
 import codeu.chat.util.store.StoreAccessor;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-import com.google.firebase.database.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class Model {
 
@@ -87,11 +87,13 @@ public final class Model {
 
     DatabaseReference usersRef = database.child(USERS_CHILD);
 
+    // FireBase creates a child element with "/"
     Map<String, Object> userMap  = new HashMap<>();
     userMap.put(user.id.toString() + "/" + "id", user.id.toString());
     userMap.put(user.id.toString() + "/" + "name", user.name.toString());
     userMap.put(user.id.toString() + "/" + "creation", user.creation.toString());
 
+    // updates FireBase with users
     usersRef.updateChildren(userMap);
   }
 
@@ -118,12 +120,14 @@ public final class Model {
 
     DatabaseReference convosRef = database.child(CONVERSATIONS_CHILD);
 
+    // FireBase creates a child element with "/"
     Map<String, Object> convosMap = new HashMap<>();
     convosMap.put(conversation.id.toString() + "/id", conversation.id.toString());
     convosMap.put(conversation.id.toString() + "/title", conversation.title);
     convosMap.put(conversation.id.toString() + "/creation", conversation.creation.toString());
     convosMap.put(conversation.id.toString() + "/owner" , conversation.owner.toString());
 
+    // updates FireBase database with conversation
     convosRef.updateChildren(convosMap);
   }
 
@@ -146,12 +150,14 @@ public final class Model {
 
     DatabaseReference messagesRef = database.child(MESSAGES_CHILD);
 
+    // FireBase creates a child element with "/"
     Map<String, Object> messagesMap = new HashMap<>();
     messagesMap.put(message.id.toString() + "/id", message.id.toString());
     messagesMap.put(message.id.toString() + "/creation", message.creation.toString());
     messagesMap.put(message.id.toString() + "/content", message.content.toString());
     messagesMap.put(message.id.toString() + "/author", message.author.toString());
 
+    // updates FireBase with message
     messagesRef.updateChildren(messagesMap);
   }
 
@@ -167,7 +173,9 @@ public final class Model {
     return messageByText;
   }
 
-
+  /*
+    Loads users, conversations, and
+   */
   public void load(User user) {
     userById.insert(user.id, user);
     userByTime.insert(user.creation, user);
