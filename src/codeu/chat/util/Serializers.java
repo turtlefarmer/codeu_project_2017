@@ -209,12 +209,13 @@ public final class Serializers {
 
     @Override
     public void write(PrintWriter out, String value) {
+      value = value.replace('\n', ' ');
       out.println(value);
     }
 
     @Override
     public String read(BufferedReader in) throws IOException {
-      return in.readLine();
+      return in.readLine(); 
     }
   };
 
