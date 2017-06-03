@@ -1,7 +1,6 @@
 
 # CODEU CHAT SERVER | README
 
-
 ## DISCLAIMER
 
 CODEU is a program created by Google to develop the skills of future software
@@ -9,6 +8,16 @@ engineers. This project is not an offical Google Product. This project is a
 playground for those looking to develop their coding and software engineering
 skills.
 
+## DEPENDENCIES
+
+  1. Must have [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) Installed
+  Check Java version with:
+     ```
+       $ java -version
+       ```
+  1. Install the Google Cloud SDK [here](https://cloud.google.com/sdk/)
+  
+  1. Make sure it is correctly in your path before proceeding to run the server
 
 ## ENVIRONMENT
 
@@ -16,8 +25,17 @@ All instructions here are relative to a LINUX environment. There will be some
 differences if you are working on a non-LINUX system. We will not support any
 other development environment.
 
-This project was built using JAVA 7. It is recommended that you install
-JAVA&nbsp;7 when working with this project.
+This project was built using JAVA 8. It is recommended that you install
+JAVA&nbsp;8 when working with this project. 
+
+In order for sentiment analysis to work, the Google Cloud SDK must be installed 
+on the server machine. Additionally the the cloud SDK must have permission to access
+the natural language API. To do this a service account key must be provided. Finally, 
+after the SDK has the necessary permissions, an environment variable:
+`GOOGLE_APPLICATION_CREDENTIALS=/path/to/service_account.json` 
+must be created. 
+
+More Info can be found [here](https://cloud.google.com/natural-language/docs/getting-started)
 
 
 ## GETTING STARTED
@@ -38,7 +56,7 @@ JAVA&nbsp;7 when working with this project.
 
        ```
        $ sh run_server.sh <team_id> <team_secret> <port> <persistent-dir>
-       $ sh run_client.sh <host> <port>
+       $ sh run_simple_gui_client2.sh <host> <port>
        ```
 
      You must specify the following startup arguments for `run_server.sh:
@@ -101,8 +119,8 @@ main packages/directories under `src/codeu/chat` are:
 
 ### codeu.chat.client
 
-Classes for building the two clients (`codeu.chat.ClientMain` and
-`codeu.chat.SimpleGuiClientMain`).
+Classes for building the three clients (`codeu.chat.ClientMain`,
+`codeu.chat.SimpleGuiClientMain`, and `codeu.chat.SimpleGuiClientMain2`).
 
 ### codeu.chat.server
 
