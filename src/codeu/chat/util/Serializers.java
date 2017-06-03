@@ -209,12 +209,24 @@ public final class Serializers {
 
     @Override
     public void write(PrintWriter out, String value) {
+      int numLineBreaks = 0;
+      for (int i = 0; i < value.length(); i++) {
+        if (value.charAt(i) == '\n') {
+          numLineBreaks++;
+        }
+      }
+      Serializers.INTEGER.write(out, numLineBreaks);
       out.println(value);
     }
 
     @Override
     public String read(BufferedReader in) throws IOException {
-      return in.readLine();
+      int numLineBreaks = Serializers.INTEGER.read(in);
+      String input = "";
+      for (int i = 0; i <= numLineBreaks; i++) {
+        input += in.readLine() + " ";
+      }
+      return input.substring(0, input.length() - 1);
     }
   };
 
