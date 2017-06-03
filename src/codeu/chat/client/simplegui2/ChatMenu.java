@@ -43,8 +43,8 @@ public class ChatMenu {
   private Stage stage;
   private ListView<String> conversationPanel;
   private final ClientContext clientContext;
-  private final DefaultListModel<String> messageListModel = new DefaultListModel<>();
   private final BroadCastReceiver receiver;
+  private TextArea messages;
 
   //ChatMenu constructor
   public ChatMenu(ClientContext clientContext, BroadCastReceiver receiver) {
@@ -87,7 +87,9 @@ public class ChatMenu {
                 receiver.joinConversation(cs);
 
                 clientContext.user.updateUsers();
+                clientContext.message.updateMessages(true);
 
+                updateMessages();
                 break;
               }
               localIndex++;
@@ -126,7 +128,6 @@ public class ChatMenu {
       }
     });
 
-    getAllMessages(clientContext.conversation.getCurrent());
     receiver.start();
 
   }
@@ -164,6 +165,7 @@ public class ChatMenu {
 
           boolean successfulSignOut = clientContext.user.signOutUser();
           clientContext.conversation.setCurrent(null);
+          messages.clear();
           receiver.joinConversation(null);
           signOut.setDisable(true);
         } else {
@@ -271,7 +273,6 @@ public class ChatMenu {
                 clientContext.user.getCurrent().id,
                 clientContext.conversation.getCurrentId(),
                 messageText);
-            ChatMenu.this.getAllMessages(clientContext.conversation.getCurrent());
           }
         }
 
@@ -289,7 +290,7 @@ public class ChatMenu {
 
     VBox centralBox = new VBox();
 
-    TextArea messages = new TextArea();
+    messages = new TextArea();
     messages.setPrefSize(500, 500);
     messages.setEditable(false);
     messages.setWrapText(true);
@@ -297,30 +298,32 @@ public class ChatMenu {
     centralBox.getChildren().addAll(messages);
 
     this.receiver.onBroadCast((User author, Message message) -> {
-
       final String authorName = author.name;
-
-      final String displayString = String.format("%s: [%s]: %s",
-          ((authorName == null) ? message.author : authorName), message.creation, message.content);
-
-      messages.appendText("\n" + displayString);
+      printMessage(authorName, message);
     });
 
     return centralBox;
   }
 
-  private void getAllMessages(ConversationSummary conversation) {
-    messageListModel.clear();
-
-    for (final Message m : clientContext.message.getConversationContents(conversation)) {
-      // Display author name if available.  Otherwise display the author UUID.
-      final String authorName = clientContext.user.getName(m.author);
-      final String displayString = String.format("%s: [%s]: %s",
-          ((authorName == null) ? m.author : authorName), m.creation, m.content);
-
-      messageListModel.addElement(displayString);
+  private void updateMessages() {
+    messages.clear();
+    ConversationSummary currentSummary = clientContext.conversation.getCurrent();
+    for (Message m: clientContext.message.getConversationContents(currentSummary)) {
+      String authorName = clientContext.user.getName(m.author);
+      printMessage(authorName, m);
     }
+
   }
+
+  private void printMessage(String authorName, Message message) {
+
+    final String displayString = String.format("%s: [%s]: %s",
+        ((authorName == null) ? message.author : authorName), message.creation, message.content);
+
+    messages.appendText("\n" + displayString);
+  }
+
+
 
   //pulls each word out of line and checks against list of omitted words
   private boolean containsBadLanguage(String userLine) {
