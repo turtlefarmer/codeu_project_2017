@@ -40,6 +40,9 @@ if [[ "${TEAM_ID}" == "" || "${TEAM_SECRET}" == "" || "${PORT}" == "" || "${PERS
 fi
 
 
+export GOOGLE_APPLICATION_CREDENTIALS=./CodeU-380d82e33d24.json
+gcloud auth activate-service-account --key-file=./CodeU-380d82e33d24.json
+
 if [ "${RELAY_ADDRESS}" == "" ] ; then
   java -cp ./third_party/*:./bin codeu.chat.ServerMain \
       "${TEAM_ID}" \
