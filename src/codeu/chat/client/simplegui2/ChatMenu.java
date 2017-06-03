@@ -308,13 +308,8 @@ public class ChatMenu {
     for (final Message m : clientContext.message.getConversationContents(conversation)) {
       // Display author name if available.  Otherwise display the author UUID.
       final String authorName = clientContext.user.getName(m.author);
-
-      Time time= m.creation;
-      String cutSecondsOffTime= time.toString();
-      cutSecondsOffTime=cutSecondsOffTime.substring(0, cutSecondsOffTime.length()- 7);
-
       final String displayString = String.format("%s: [%s]: %s",
-          ((authorName == null) ? m.author : authorName), cutSecondsOffTime, m.content);
+          ((authorName == null) ? m.author : authorName), m.creation, m.content);
 
       messageListModel.addElement(displayString);
     }
