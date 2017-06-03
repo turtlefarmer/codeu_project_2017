@@ -1,6 +1,5 @@
 package codeu.chat.database;
 
-import codeu.chat.common.Conversation;
 import codeu.chat.database.model.ConversationModel;
 import codeu.chat.database.model.UserModel;
 import com.google.firebase.database.*;
@@ -9,9 +8,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/**
- * Created by greg on 6/1/17.
- */
 public class DatabaseStartup {
     private final String USERS_CHILD = "users";
     private final String MESSAGES_CHILD = "messages";
@@ -31,9 +27,6 @@ public class DatabaseStartup {
                 while (usersIterator.hasNext()) {
                     UserModel user = usersIterator.next().getValue(UserModel.class);
                     String key = user.id;
-                    System.out.println("ID: " + user.id);
-                    System.out.println("Name: " + user.name);
-                    System.out.println("Creation: " + user.creation);
                     usersMap.put(key, user);
                 }
             }
@@ -56,10 +49,6 @@ public class DatabaseStartup {
                 while (convosIterator.hasNext()) {
                     ConversationModel convo = convosIterator.next().getValue(ConversationModel.class);
                     String key = convo.id;
-                    System.out.println("ID: " + convo.id);
-                    System.out.println("Title: " + convo.title);
-                    System.out.println("Owner: " + convo.owner);
-                    System.out.println("Creation: " + convo.creation);
                     convosMap.put(key, convo);
                 }
             }
