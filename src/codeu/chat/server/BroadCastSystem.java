@@ -92,10 +92,6 @@ public class BroadCastSystem {
   public void switchConversation(Connection connection, ConversationSummary oldCon,
       ConversationSummary newCon) {
 
-    // todo currently user can be part of two conversations at once. ex: if they use a null old con twice
-    if (newCon == null && oldCon == null) {
-      throw new NullPointerException();
-    }
     if (oldCon != null) {
       removeConnection(connection, oldCon.id);
     }

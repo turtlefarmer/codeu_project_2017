@@ -70,16 +70,17 @@ public class ChatMenu {
     //add action listener to selected item
       conversationPanel.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
           @Override
-          public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+          public void changed(ObservableValue<? extends String> observableValue, String old, String newCon) {
 
-            //I believe t1 is the String of the newly selected item (index?, name?)
+            if (!clientContext.user.hasCurrent()) {
+              return;
+            }
 
             int index=conversationPanel.getSelectionModel().getSelectedIndex();
-            //if t1 is the conversation title
 
             int localIndex=0;
             for (final ConversationSummary cs : clientContext.conversation.getConversationSummaries()) {
-              if (localIndex >= index && cs.title.equals(t1)) {
+              if (localIndex >= index && cs.title.equals(newCon)) {
 
                 clientContext.conversation.setCurrent(cs);
                 //update message panel
@@ -147,6 +148,7 @@ public class ChatMenu {
     //add buttons for different options
     final Button signOut = new Button("Sign Out");
     signOut.setPrefSize(100, 20);
+    signOut.setDisable(true);
 
     final Button addUser = new Button("Add User");
     addUser.setPrefSize(100, 20);
@@ -161,7 +163,9 @@ public class ChatMenu {
         if (clientContext.user.hasCurrent()) {
 
           boolean successfulSignOut = clientContext.user.signOutUser();
-
+          clientContext.conversation.setCurrent(null);
+          receiver.joinConversation(null);
+          signOut.setDisable(true);
         } else {
           AlertBox alertNoUser = new AlertBox("You are not signed in.",
               "You cannot sign out without being logged in.");
@@ -185,7 +189,7 @@ public class ChatMenu {
           if (s != null && s.length() > 0) {
             clientContext.user.addUser(s);
             clientContext.user.signInUser(s);
-
+            signOut.setDisable(false);
           }
 
         }
@@ -403,14 +407,11 @@ public class ChatMenu {
   }
 
   private void addNewConversation(String conversationName){
-
     conversationPanel.getItems().add(conversationName);
-
   }
 
   private void updateConversationPanel(ListView<String> conversationPanel) {
 
-    System.out.println("Updating Conversations");
     clientContext.conversation.updateAllConversations(false);
     conversationPanel.getItems().clear();
 
