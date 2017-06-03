@@ -58,6 +58,11 @@ More Info can be found [here](https://cloud.google.com/natural-language/docs/get
        $ sh run_server.sh <team_id> <team_secret> <port> <persistent-dir>
        $ sh run_simple_gui_client2.sh <host> <port>
        ```
+  1. To observe the user sentiment scores, in a seperate shell run: 
+       ```
+       $ sh run_client.sh <host> <port>
+       >> u-list-all
+       ```
 
      You must specify the following startup arguments for `run_server.sh:
      + `<team_id>` and `<team_secret>`: a numeric id for your team, and a secret
