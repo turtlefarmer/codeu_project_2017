@@ -1,10 +1,10 @@
 package codeu.chat.client.simplegui2;
 
 import codeu.chat.client.BroadCastReceiver;
+import codeu.chat.client.ClientContext;
 import codeu.chat.client.Controller;
 import codeu.chat.client.View;
 import codeu.chat.util.Logger;
-import codeu.chat.client.ClientContext;
 
 public class MainGui {
 

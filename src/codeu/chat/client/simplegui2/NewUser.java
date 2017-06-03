@@ -1,8 +1,6 @@
 package codeu.chat.client.simplegui2;
 
 import codeu.chat.client.ClientContext;
-import codeu.chat.client.View;
-import codeu.chat.client.Controller;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;

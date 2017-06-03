@@ -5,17 +5,14 @@ import codeu.chat.client.ClientContext;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
 import codeu.chat.common.User;
-import codeu.chat.util.Time;
+import java.util.ArrayList;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
@@ -24,13 +21,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-
-import javax.swing.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Set;
 
 /**
  * Created by nora on 4/6/17.
@@ -61,25 +51,28 @@ public class ChatMenu {
     conversationPanel.setMinWidth(200);
     //border for conversation Panel
     conversationPanel.setStyle("-fx-padding: 10;" +
-            "-fx-border-style: solid inside;" +
-            "-fx-border-width: 4;" +
-            "-fx-border-insets: 0;" +
-            "-fx-border-radius: 5;" +
-            "-fx-border-color: #336699;");
+        "-fx-border-style: solid inside;" +
+        "-fx-border-width: 4;" +
+        "-fx-border-insets: 0;" +
+        "-fx-border-radius: 5;" +
+        "-fx-border-color: #336699;");
 
     //add action listener to selected item
-      conversationPanel.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+    conversationPanel.getSelectionModel().selectedItemProperty()
+        .addListener(new ChangeListener<String>() {
           @Override
-          public void changed(ObservableValue<? extends String> observableValue, String old, String newCon) {
+          public void changed(ObservableValue<? extends String> observableValue, String old,
+              String newCon) {
 
             if (!clientContext.user.hasCurrent()) {
               return;
             }
 
-            int index=conversationPanel.getSelectionModel().getSelectedIndex();
+            int index = conversationPanel.getSelectionModel().getSelectedIndex();
 
-            int localIndex=0;
-            for (final ConversationSummary cs : clientContext.conversation.getConversationSummaries()) {
+            int localIndex = 0;
+            for (final ConversationSummary cs : clientContext.conversation
+                .getConversationSummaries()) {
               if (localIndex >= index && cs.title.equals(newCon)) {
 
                 clientContext.conversation.setCurrent(cs);
@@ -96,20 +89,17 @@ public class ChatMenu {
             }
 
           }
-      });
+        });
 
-      conversationPanel.setOnMouseEntered(new EventHandler<MouseEvent>() {
-        @Override
-        public void handle(MouseEvent event) {
-          updateConversationPanel(conversationPanel);
-        }
-      });
-
-
+    conversationPanel.setOnMouseEntered(new EventHandler<MouseEvent>() {
+      @Override
+      public void handle(MouseEvent event) {
+        updateConversationPanel(conversationPanel);
+      }
+    });
 
     //organize main Pane
     mainWindow.setTop(topMenuBar());
-
 
     mainWindow.setLeft(conversationPanel);
     mainWindow.setBottom(textBar());
@@ -212,7 +202,7 @@ public class ChatMenu {
           if (s != null && s.length() > 0) {
             clientContext.conversation.startConversation(s, clientContext.user.getCurrent().id);
 
-            for (ConversationSummary cs: clientContext.conversation.getConversationSummaries()) {
+            for (ConversationSummary cs : clientContext.conversation.getConversationSummaries()) {
               addNewConversation(cs.title);
             }
 
@@ -308,7 +298,7 @@ public class ChatMenu {
   private void updateMessages() {
     messages.clear();
     ConversationSummary currentSummary = clientContext.conversation.getCurrent();
-    for (Message m: clientContext.message.getConversationContents(currentSummary)) {
+    for (Message m : clientContext.message.getConversationContents(currentSummary)) {
       String authorName = clientContext.user.getName(m.author);
       printMessage(authorName, m);
     }
@@ -322,7 +312,6 @@ public class ChatMenu {
 
     messages.appendText("\n" + displayString);
   }
-
 
 
   //pulls each word out of line and checks against list of omitted words
@@ -409,7 +398,7 @@ public class ChatMenu {
 
   }
 
-  private void addNewConversation(String conversationName){
+  private void addNewConversation(String conversationName) {
     conversationPanel.getItems().add(conversationName);
   }
 
@@ -418,7 +407,7 @@ public class ChatMenu {
     clientContext.conversation.updateAllConversations(false);
     conversationPanel.getItems().clear();
 
-    for (ConversationSummary cs: clientContext.conversation.getConversationSummaries()) {
+    for (ConversationSummary cs : clientContext.conversation.getConversationSummaries()) {
       conversationPanel.getItems().add(cs.title);
     }
 

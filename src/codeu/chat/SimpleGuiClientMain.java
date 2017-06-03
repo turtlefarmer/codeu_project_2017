@@ -14,22 +14,21 @@
 
 package codeu.chat;
 
-import java.io.IOException;
-
 import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.Controller;
-import codeu.chat.client.simplegui.ChatSimpleGui;
 import codeu.chat.client.View;
+import codeu.chat.client.simplegui.ChatSimpleGui;
 import codeu.chat.util.Logger;
 import codeu.chat.util.RemoteAddress;
 import codeu.chat.util.connections.ClientConnectionSource;
 import codeu.chat.util.connections.ConnectionSource;
+import java.io.IOException;
 
 final class SimpleGuiClientMain {
 
   private static final Logger.Log LOG = Logger.newLog(SimpleGuiClientMain.class);
 
-  public static void main(String [] args) {
+  public static void main(String[] args) {
 
     try {
       Logger.enableFileOutput("chat_simple_gui_client_log.log");
@@ -46,7 +45,7 @@ final class SimpleGuiClientMain {
     final RemoteAddress address = RemoteAddress.parse(args[0]);
 
     try (
-      final ConnectionSource source = new ClientConnectionSource(address.host, address.port)
+        final ConnectionSource source = new ClientConnectionSource(address.host, address.port)
     ) {
       final BroadCastReceiver receiver = new BroadCastReceiver(source);
       final Controller controller = new Controller(receiver);

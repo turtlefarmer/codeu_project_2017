@@ -14,9 +14,6 @@
 
 package codeu.chat.client;
 
-import java.io.BufferedReader;
-import java.io.PrintWriter;
-
 import codeu.chat.common.BasicController;
 import codeu.chat.common.Conversation;
 import codeu.chat.common.Message;
@@ -25,6 +22,8 @@ import codeu.chat.common.User;
 import codeu.chat.util.Logger;
 import codeu.chat.util.Serializers;
 import codeu.chat.util.Uuid;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 
 public class Controller implements BasicController {
 
@@ -93,7 +92,7 @@ public class Controller implements BasicController {
   }
 
   @Override
-  public Conversation newConversation(String title, Uuid owner)  {
+  public Conversation newConversation(String title, Uuid owner) {
 
     Conversation response = null;
 

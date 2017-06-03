@@ -16,10 +16,10 @@ package codeu.chat.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -81,7 +81,9 @@ public final class Serializers {
     @Override
     public Integer read(BufferedReader in) throws IOException {
       String st = in.readLine();
-      if (st == null) return -1;
+      if (st == null) {
+        return -1;
+      }
       return Integer.parseInt(st);
     }
   };
@@ -215,7 +217,7 @@ public final class Serializers {
 
     @Override
     public String read(BufferedReader in) throws IOException {
-      return in.readLine(); 
+      return in.readLine();
     }
   };
 
