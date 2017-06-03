@@ -22,6 +22,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import javax.swing.*;
 import java.lang.reflect.Array;
@@ -111,6 +112,15 @@ public class ChatMenu {
     stage = new Stage();
     scene = new Scene(mainWindow);
     stage.setScene(scene);
+
+    //turn off broadcast when it closes
+    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+      @Override
+      public void handle(WindowEvent windowEvent) {
+
+        receiver.exit();
+      }
+    });
 
     getAllMessages(clientContext.conversation.getCurrent());
     receiver.start();
