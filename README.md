@@ -119,8 +119,8 @@ main packages/directories under `src/codeu/chat` are:
 
 ### codeu.chat.client
 
-Classes for building the two clients (`codeu.chat.ClientMain` and
-`codeu.chat.SimpleGuiClientMain`).
+Classes for building the three clients (`codeu.chat.ClientMain`,
+`codeu.chat.SimpleGuiClientMain`, and `codeu.chat.SimpleGuiClientMain`).
 
 ### codeu.chat.server
 
