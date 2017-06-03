@@ -28,7 +28,6 @@ import codeu.chat.util.connections.ClientConnectionSource;
 import codeu.chat.util.connections.Connection;
 import codeu.chat.util.connections.ConnectionSource;
 import codeu.chat.util.connections.ServerConnectionSource;
-
 import java.io.IOException;
 
 final class ServerMain {
@@ -64,7 +63,7 @@ final class ServerMain {
       final DatabaseAccess database = new DatabaseAccess();
       database.initialize();
       LOG.info("FireBase initialized.");
-    } catch (Exception ex){
+    } catch (Exception ex) {
       LOG.error(ex, "Failed to initialize FireBase");
     }
 
@@ -73,12 +72,13 @@ final class ServerMain {
     final String persistentPath = args[3];
 
     final RemoteAddress relayAddress = args.length > 4 ?
-                                       RemoteAddress.parse(args[4]) :
-                                       null;
+        RemoteAddress.parse(args[4]) :
+        null;
 
     try (
         final ConnectionSource serverSource = ServerConnectionSource.forPort(myPort);
-        final ConnectionSource relaySource = relayAddress == null ? null : new ClientConnectionSource(relayAddress.host, relayAddress.port)
+        final ConnectionSource relaySource = relayAddress == null ? null
+            : new ClientConnectionSource(relayAddress.host, relayAddress.port)
     ) {
 
       LOG.info("Starting server...");
@@ -92,13 +92,13 @@ final class ServerMain {
   }
 
   private static void runServer(Uuid id,
-                                byte[] secret,
-                                ConnectionSource serverSource,
-                                ConnectionSource relaySource) {
+      byte[] secret,
+      ConnectionSource serverSource,
+      ConnectionSource relaySource) {
 
     final Relay relay = relaySource == null ?
-                        new NoOpRelay() :
-                        new RemoteRelay(relaySource);
+        new NoOpRelay() :
+        new RemoteRelay(relaySource);
 
     final Server server = new Server(id, secret, relay);
 

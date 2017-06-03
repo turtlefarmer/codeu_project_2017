@@ -1,6 +1,5 @@
 package codeu.chat.client.simplegui2;
 
-import codeu.chat.client.ClientContext;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

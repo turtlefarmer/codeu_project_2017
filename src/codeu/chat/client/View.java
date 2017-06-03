@@ -14,23 +14,22 @@
 
 package codeu.chat.client;
 
-import codeu.chat.common.SentimentScore;
-import java.io.BufferedReader;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collection;
-
 import codeu.chat.common.BasicView;
 import codeu.chat.common.Conversation;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.LogicalView;
 import codeu.chat.common.Message;
 import codeu.chat.common.NetworkCode;
+import codeu.chat.common.SentimentScore;
 import codeu.chat.common.User;
 import codeu.chat.util.Logger;
 import codeu.chat.util.Serializers;
 import codeu.chat.util.Time;
 import codeu.chat.util.Uuid;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collection;
 
 // VIEW
 //
@@ -53,7 +52,6 @@ public final class View implements BasicView, LogicalView {
     final Collection<User> users = new ArrayList<>();
 
     final PrintWriter out = receiver.out();
-
 
     try {
 
@@ -83,7 +81,7 @@ public final class View implements BasicView, LogicalView {
 
     final PrintWriter out = receiver.out();
 
-    try  {
+    try {
 
       Serializers.INTEGER.write(out, NetworkCode.GET_ALL_CONVERSATIONS_REQUEST);
 
@@ -191,7 +189,6 @@ public final class View implements BasicView, LogicalView {
 
     final PrintWriter out = receiver.out();
 
-
     try {
 
       Serializers.INTEGER.write(out, NetworkCode.GET_USERS_EXCLUDING_REQUEST);
@@ -247,7 +244,7 @@ public final class View implements BasicView, LogicalView {
 
     final PrintWriter out = receiver.out();
 
-    try  {
+    try {
 
       Serializers.INTEGER.write(out, NetworkCode.GET_CONVERSATIONS_BY_TITLE_REQUEST);
       Serializers.STRING.write(out, filter);
