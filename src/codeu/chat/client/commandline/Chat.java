@@ -14,6 +14,8 @@
 
 package codeu.chat.client.commandline;
 
+import codeu.chat.common.Message;
+import codeu.chat.common.User;
 import java.util.Scanner;
 
 import codeu.chat.client.ClientContext;
@@ -43,7 +45,7 @@ public final class Chat {
     clientContext = new ClientContext(controller, view);
     broadCastReceiver = receiver;
     this.clientContext.message.linkReceiver(broadCastReceiver);
-    broadCastReceiver.onBroadCast( (message) -> ClientMessage.printMessage(message,clientContext.user) );
+    broadCastReceiver.onBroadCast( (User user, Message message) -> ClientMessage.printMessage(message,clientContext.user) );
     broadCastReceiver.start();
   }
 
