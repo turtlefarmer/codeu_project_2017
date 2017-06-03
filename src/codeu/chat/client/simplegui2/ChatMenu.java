@@ -4,6 +4,7 @@ import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.ClientContext;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
+import codeu.chat.util.Time;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -298,8 +299,12 @@ public class ChatMenu {
       // Display author name if available.  Otherwise display the author UUID.
       final String authorName = clientContext.user.getName(m.author);
 
+      Time time= m.creation;
+      String cutSecondsOffTime= time.toString();
+      cutSecondsOffTime=cutSecondsOffTime.substring(0, cutSecondsOffTime.length()- 7);
+
       final String displayString = String.format("%s: [%s]: %s",
-          ((authorName == null) ? m.author : authorName), m.creation, m.content);
+          ((authorName == null) ? m.author : authorName), cutSecondsOffTime, m.content);
 
       messageListModel.addElement(displayString);
     }
