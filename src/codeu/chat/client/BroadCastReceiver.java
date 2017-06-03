@@ -3,6 +3,7 @@ package codeu.chat.client;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
 import codeu.chat.common.NetworkCode;
+import codeu.chat.common.User;
 import codeu.chat.util.Serializers;
 import codeu.chat.util.Uuid;
 import codeu.chat.util.connections.Connection;
@@ -35,7 +36,7 @@ public class BroadCastReceiver extends Thread {
   @FunctionalInterface
   public interface BroadcastEvent {
 
-    void onBroadcast(Message message);
+    void onBroadcast(User author, Message message);
   }
 
   public BroadCastReceiver(ConnectionSource source) {
@@ -62,10 +63,11 @@ public class BroadCastReceiver extends Thread {
 
           if (type == NetworkCode.NEW_BROADCAST) {
             Uuid conversationUuid = Uuid.SERIALIZER.read(in);
+            User author = User.SERIALIZER.read(in);
             Message message = Message.SERIALIZER.read(in);
             if (currentCon.id.equals(conversationUuid)) {
               if (response != null) {
-                response.onBroadcast(message);
+                response.onBroadcast(author, message);
               }
               if (storedMessages != null) {
                 storedMessages.add(message);

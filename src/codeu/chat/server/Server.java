@@ -162,7 +162,7 @@ public final class Server {
         Serializers.nullable(Message.SERIALIZER).write(out, message);
       }
 
-      broadCastSystem.addMessage(conversation, message);
+      broadCastSystem.addMessage(conversation, user, message);
 
       timeline.scheduleNow(createSendToRelayEvent(
           author,

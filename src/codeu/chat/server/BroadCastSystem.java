@@ -25,10 +25,12 @@ public class BroadCastSystem {
   private class ConversationMessageLink {
 
     Uuid conversationUuid;
+    User authorName;
     Message message;
 
-    ConversationMessageLink(Uuid conversationUuid, Message message) {
+    ConversationMessageLink(Uuid conversationUuid, User name,Message message) {
       this.conversationUuid = conversationUuid;
+      this.authorName = name;
       this.message = message;
     }
 
@@ -107,6 +109,7 @@ public class BroadCastSystem {
 
     Uuid conversationId = messageLink.conversationUuid;
     Message message = messageLink.message;
+    User author = messageLink.authorName;
 
     // using an iterator in order to remove connections if they return an exception
     // this is in case the client has disconnected for whatever reason
@@ -126,6 +129,7 @@ public class BroadCastSystem {
 
           Serializers.INTEGER.write(writer, NetworkCode.NEW_BROADCAST);
           Uuid.SERIALIZER.write(writer, conversationId);
+          User.SERIALIZER.write(writer, author);
           Message.SERIALIZER.write(writer, message);
         }
 
@@ -163,11 +167,11 @@ public class BroadCastSystem {
   }
 
   // adds the given message to the list of messages that need to be broadcasted
-  public void addMessage(Uuid conversationUuid, Message message) {
+  public void addMessage(Uuid conversationUuid, User author, Message message) {
     if (message == null) {
       throw new NullPointerException("Message cannot be null");
     }
-    messagesToBroadcast.add(new ConversationMessageLink(conversationUuid, message));
+    messagesToBroadcast.add(new ConversationMessageLink(conversationUuid, author,message));
   }
 
 }

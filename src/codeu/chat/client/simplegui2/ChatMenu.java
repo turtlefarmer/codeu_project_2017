@@ -4,6 +4,7 @@ import codeu.chat.client.BroadCastReceiver;
 import codeu.chat.client.ClientContext;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
+import codeu.chat.common.User;
 import codeu.chat.util.Time;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -83,6 +84,8 @@ public class ChatMenu {
                 clientContext.conversation.setCurrent(cs);
                 //update message panel
                 receiver.joinConversation(cs);
+
+                clientContext.user.updateUsers();
 
                 break;
               }
@@ -289,9 +292,9 @@ public class ChatMenu {
 
     centralBox.getChildren().addAll(messages);
 
-    this.receiver.onBroadCast((Message message) -> {
+    this.receiver.onBroadCast((User author, Message message) -> {
 
-      final String authorName = clientContext.user.getName(message.author);
+      final String authorName = author.name;
 
       final String displayString = String.format("%s: [%s]: %s",
           ((authorName == null) ? message.author : authorName), message.creation, message.content);

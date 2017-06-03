@@ -44,11 +44,11 @@ public final class MessagePanel extends JPanel {
     this.receiver = receiver;
     clientContext.message.linkReceiver(receiver);
     this.receiver.onBroadCast(
-        (message) -> {
+        (User author, Message message) -> {
 
 
           // Display author name if available.  Otherwise display the author UUID.
-                final String authorName = clientContext.user.getName(message.author);
+                final String authorName = author.name;
 
                 final String displayString = String.format("%s: [%s]: %s",
                         ((authorName == null) ? message.author : authorName), message.creation, message.content);
