@@ -43,7 +43,7 @@ public final class Time implements Comparable<Time> {
 
   public static final JsonDeserializer<Time> JSON_DESERIALIZER = new JsonDeserializer<Time>() {
     @Override
-    public Time deserialize(JsonElement json, Type typeOfT,  JsonDeserializationContext context)
+    public Time deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
         throws JsonParseException {
 
       return json == null ? null : Time.fromMs(json.getAsLong());
@@ -75,7 +75,7 @@ public final class Time implements Comparable<Time> {
     }
 
     @Override
-    public Time read(BufferedReader in) throws IOException{
+    public Time read(BufferedReader in) throws IOException {
       Gson gson = Serializers.GSON;
       Time value = gson.fromJson(in.readLine(), Time.class);
       return value;
@@ -87,9 +87,13 @@ public final class Time implements Comparable<Time> {
 
   private final Date date;
 
-  private Time(long totalMs) { this.date = new Date(totalMs); }
+  private Time(long totalMs) {
+    this.date = new Date(totalMs);
+  }
 
-  public long inMs() { return date.getTime(); }
+  public long inMs() {
+    return date.getTime();
+  }
 
   @Override
   public int compareTo(Time other) {
@@ -105,8 +109,12 @@ public final class Time implements Comparable<Time> {
     return formatter.format(date);
   }
 
-  public static Time fromMs(long ms) { return new Time(ms); }
+  public static Time fromMs(long ms) {
+    return new Time(ms);
+  }
 
-  public static Time now() { return Time.fromMs(System.currentTimeMillis()); }
+  public static Time now() {
+    return Time.fromMs(System.currentTimeMillis());
+  }
 
 }

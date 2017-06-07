@@ -1,9 +1,12 @@
 package codeu.chat.server;
 
-import codeu.chat.common.*;
+import codeu.chat.common.ConversationSummary;
+import codeu.chat.common.Message;
+import codeu.chat.common.NetworkCode;
+import codeu.chat.common.User;
 import codeu.chat.util.Serializers;
-import codeu.chat.util.connections.Connection;
 import codeu.chat.util.Uuid;
+import codeu.chat.util.connections.Connection;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -28,7 +31,7 @@ public class BroadCastSystem {
     User authorName;
     Message message;
 
-    ConversationMessageLink(Uuid conversationUuid, User name,Message message) {
+    ConversationMessageLink(Uuid conversationUuid, User name, Message message) {
       this.conversationUuid = conversationUuid;
       this.authorName = name;
       this.message = message;
@@ -167,7 +170,7 @@ public class BroadCastSystem {
     if (message == null) {
       throw new NullPointerException("Message cannot be null");
     }
-    messagesToBroadcast.add(new ConversationMessageLink(conversationUuid, author,message));
+    messagesToBroadcast.add(new ConversationMessageLink(conversationUuid, author, message));
   }
 
 }

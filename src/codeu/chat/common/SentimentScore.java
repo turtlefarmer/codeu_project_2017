@@ -3,7 +3,6 @@ package codeu.chat.common;
 import codeu.chat.util.Serializer;
 import codeu.chat.util.Serializers;
 import com.google.cloud.language.spi.v1beta2.LanguageServiceClient;
-
 import com.google.cloud.language.v1beta2.AnalyzeSentimentResponse;
 import com.google.cloud.language.v1beta2.Document;
 import com.google.cloud.language.v1beta2.Document.Type;
@@ -120,7 +119,7 @@ public class SentimentScore {
     // the following is a temporary solution to avoid the weighting getting too high
     final double nextWeighting = Math.min(this.weighting + magnitude, 50);
 
-    this.score = (this.score * this.weighting) +  (score * magnitude);
+    this.score = (this.score * this.weighting) + (score * magnitude);
     this.score /= nextWeighting == 0 ? 1 : nextWeighting;
     this.weighting = nextWeighting;
 

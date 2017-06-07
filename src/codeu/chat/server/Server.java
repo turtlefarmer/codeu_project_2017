@@ -15,19 +15,12 @@
 
 package codeu.chat.server;
 
-import codeu.chat.common.SentimentScore;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
-import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.Collection;
-
 import codeu.chat.common.Conversation;
 import codeu.chat.common.ConversationSummary;
 import codeu.chat.common.Message;
 import codeu.chat.common.NetworkCode;
 import codeu.chat.common.Relay;
+import codeu.chat.common.SentimentScore;
 import codeu.chat.common.User;
 import codeu.chat.util.Logger;
 import codeu.chat.util.Serializers;
@@ -35,6 +28,12 @@ import codeu.chat.util.Time;
 import codeu.chat.util.Timeline;
 import codeu.chat.util.Uuid;
 import codeu.chat.util.connections.Connection;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.Collection;
 
 public final class Server {
 
@@ -309,7 +308,7 @@ public final class Server {
         Serializers.INTEGER.write(out, NetworkCode.GET_USER_SCORE_RESPONSE);
         SentimentScore.SERIALIZER.write(out, score);
       }
-      
+
     } else {
 
       // In the case that the message was not handled make a dummy message with

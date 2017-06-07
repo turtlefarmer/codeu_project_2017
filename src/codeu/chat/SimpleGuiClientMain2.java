@@ -22,27 +22,26 @@ import codeu.chat.util.Logger;
 import codeu.chat.util.RemoteAddress;
 import codeu.chat.util.connections.ClientConnectionSource;
 import codeu.chat.util.connections.ConnectionSource;
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
-public class SimpleGuiClientMain2 extends Application{
+public class SimpleGuiClientMain2 extends Application {
 
   private static final Logger.Log LOG = Logger.newLog(SimpleGuiClientMain2.class);
   private static Stage windowPrime;
   private static String[] arguments;
 
-  public static void main(String [] args) {
+  public static void main(String[] args) {
 
-      arguments = args;
-      launch(args);
+    arguments = args;
+    launch(args);
   }
 
   @Override
-  public void start(Stage primaryStage) throws Exception{
+  public void start(Stage primaryStage) throws Exception {
 
-      windowPrime= primaryStage;
+    windowPrime = primaryStage;
 
     try {
       Logger.enableFileOutput("chat_simple_gui_client_log.log");
@@ -59,7 +58,7 @@ public class SimpleGuiClientMain2 extends Application{
     final RemoteAddress address = RemoteAddress.parse(arguments[0]);
 
     try (
-            final ConnectionSource source = new ClientConnectionSource(address.host, address.port)
+        final ConnectionSource source = new ClientConnectionSource(address.host, address.port)
     ) {
       final BroadCastReceiver receiver = new BroadCastReceiver(source);
       final Controller controller = new Controller(receiver);
