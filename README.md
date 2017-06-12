@@ -30,10 +30,9 @@ JAVA&nbsp;8 when working with this project.
 
 In order for sentiment analysis to work, the Google Cloud SDK must be installed 
 on the server machine. Additionally the the cloud SDK must have permission to access
-the natural language API. To do this a service account key must be provided. Finally, 
-after the SDK has the necessary permissions, an environment variable:
-`GOOGLE_APPLICATION_CREDENTIALS=/path/to/service_account.json` 
-must be created. 
+the natural language API. To do this a service account key must be provided. 
+*Inserted by Proj Advisor*: My personal service key has been added to the repo for the duration
+of the review period.  Please ping me at hengsun@ if it's not working for some reason.
 
 More Info can be found [here](https://cloud.google.com/natural-language/docs/getting-started)
 
