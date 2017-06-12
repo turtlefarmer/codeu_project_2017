@@ -40,6 +40,12 @@ More Info can be found [here](https://cloud.google.com/natural-language/docs/get
 
 ## GETTING STARTED
 
+  1. (OPTIONAL) To temporarily add Oracle Java8 to your $PATH, using the path where you
+     unzipped the jdk.
+       ```
+       $ export PATH=~/Downloads/jdk1.8.0_131/bin:$PATH
+       ```
+
   1. To build the project:
        ```
        $ sh clean.sh
